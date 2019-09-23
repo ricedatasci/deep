@@ -1,5 +1,5 @@
 site_name: DEEP (Data Education and Exploration Project)
-docs_dir: 'deep-site'
+docs_dir: 'docs'
 site_dir: 'site'
 theme:
   name: 'material'
@@ -11,7 +11,7 @@ theme:
   language: 'en'
 repo_name: 'ricedatasci/deep'
 repo_url: 'https://github.com/ricedatasci/deep'
-edit_uri: 'edit/master/site'
+edit_uri: 'edit/master/docs'
 extra:
   social:
     - type: 'github'
