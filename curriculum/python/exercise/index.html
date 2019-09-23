@@ -36,7 +36,7 @@
     
     
       
-        <title>Assignment 0 - DEEP (Data Education and Exploration Project)</title>
+        <title>Exercise - DEEP (Data Education and Exploration Project)</title>
       
     
     
@@ -47,7 +47,7 @@
       
         
         
-        <meta name="theme-color" content="#3f51b5">
+        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -73,7 +73,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="blue">
   
     <svg class="md-svg">
       <defs>
@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#assignment-0" tabindex="1" class="md-skip">
+      <a href="#exercise" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -113,7 +113,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Assignment 0
+                Exercise
               
             </span>
           
@@ -297,9 +297,38 @@
       
     
     
-    <a href="./" title="Assignment 0" class="md-nav__link md-nav__link--active">
-      Assignment 0
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Exercise
+      </label>
+    
+    <a href="./" title="Exercise" class="md-nav__link md-nav__link--active">
+      Exercise
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2d" class="md-nav__link">
+    2d
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -355,6 +384,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2d" class="md-nav__link">
+    2d
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -365,11 +410,129 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/ricedatasci/deep/edit/master/site/curriculum/python/assignment0.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/ricedatasci/deep/edit/master/site/curriculum/python/exercise.ipynb" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="assignment-0">Assignment 0!<a class="headerlink" href="#assignment-0" title="Permanent link">&para;</a></h1>
-<p>jk we're not going to have assignments </p>
+                <h1 id="exercise">exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h1>
+<p>Plot some functions!</p>
+<h2 id="2d">2d<a class="headerlink" href="#2d" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.dpi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="err">?</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>[0;31mSignature:[0m
+[0mnp[0m[0;34m.[0m[0mlogspace[0m[0;34m([0m[0;34m[0m
+[0;34m[0m    [0mstart[0m[0;34m,[0m[0;34m[0m
+[0;34m[0m    [0mstop[0m[0;34m,[0m[0;34m[0m
+[0;34m[0m    [0mnum[0m[0;34m=[0m[0;36m50[0m[0;34m,[0m[0;34m[0m
+[0;34m[0m    [0mendpoint[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m[0;34m[0m
+[0;34m[0m    [0mbase[0m[0;34m=[0m[0;36m10.0[0m[0;34m,[0m[0;34m[0m
+[0;34m[0m    [0mdtype[0m[0;34m=[0m[0;32mNone[0m[0;34m,[0m[0;34m[0m
+[0;34m[0m    [0maxis[0m[0;34m=[0m[0;36m0[0m[0;34m,[0m[0;34m[0m
+[0;34m[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;31mDocstring:[0m
+Return numbers spaced evenly on a log scale.
+
+In linear space, the sequence starts at ``base ** start``
+(`base` to the power of `start`) and ends with ``base ** stop``
+(see `endpoint` below).
+
+.. versionchanged:: 1.16.0
+    Non-scalar `start` and `stop` are now supported.
+
+Parameters
+----------
+start : array_like
+    ``base ** start`` is the starting value of the sequence.
+stop : array_like
+    ``base ** stop`` is the final value of the sequence, unless `endpoint`
+    is False.  In that case, ``num + 1`` values are spaced over the
+    interval in log-space, of which all but the last (a sequence of
+    length `num`) are returned.
+num : integer, optional
+    Number of samples to generate.  Default is 50.
+endpoint : boolean, optional
+    If true, `stop` is the last sample. Otherwise, it is not included.
+    Default is True.
+base : float, optional
+    The base of the log space. The step size between the elements in
+    ``ln(samples) / ln(base)`` (or ``log_base(samples)``) is uniform.
+    Default is 10.0.
+dtype : dtype
+    The type of the output array.  If `dtype` is not given, infer the data
+    type from the other input arguments.
+axis : int, optional
+    The axis in the result to store the samples.  Relevant only if start
+    or stop are array-like.  By default (0), the samples will be along a
+    new axis inserted at the beginning. Use -1 to get an axis at the end.
+
+    .. versionadded:: 1.16.0
+
+
+Returns
+-------
+samples : ndarray
+    `num` samples, equally spaced on a log scale.
+
+See Also
+--------
+arange : Similar to linspace, with the step size specified instead of the
+         number of samples. Note that, when used with a float endpoint, the
+         endpoint may or may not be included.
+linspace : Similar to logspace, but with the samples uniformly distributed
+           in linear space, instead of log space.
+geomspace : Similar to logspace, but with endpoints specified directly.
+
+Notes
+-----
+Logspace is equivalent to the code
+
+&gt;&gt;&gt; y = np.linspace(start, stop, num=num, endpoint=endpoint)
+... # doctest: +SKIP
+&gt;&gt;&gt; power(base, y).astype(dtype)
+... # doctest: +SKIP
+
+Examples
+--------
+&gt;&gt;&gt; np.logspace(2.0, 3.0, num=4)
+array([ 100.        ,  215.443469  ,  464.15888336, 1000.        ])
+&gt;&gt;&gt; np.logspace(2.0, 3.0, num=4, endpoint=False)
+array([100.        ,  177.827941  ,  316.22776602,  562.34132519])
+&gt;&gt;&gt; np.logspace(2.0, 3.0, num=4, base=2.0)
+array([4.        ,  5.0396842 ,  6.34960421,  8.        ])
+
+Graphical illustration:
+
+&gt;&gt;&gt; import matplotlib.pyplot as plt
+&gt;&gt;&gt; N = 10
+&gt;&gt;&gt; x1 = np.logspace(0.1, 1, N, endpoint=True)
+&gt;&gt;&gt; x2 = np.logspace(0.1, 1, N, endpoint=False)
+&gt;&gt;&gt; y = np.zeros(N)
+&gt;&gt;&gt; plt.plot(x1, y, &#39;o&#39;)
+[&lt;matplotlib.lines.Line2D object at 0x...&gt;]
+&gt;&gt;&gt; plt.plot(x2, y + 0.5, &#39;o&#39;)
+[&lt;matplotlib.lines.Line2D object at 0x...&gt;]
+&gt;&gt;&gt; plt.ylim([-0.5, 1])
+(-0.5, 1)
+&gt;&gt;&gt; plt.show()
+[0;31mFile:[0m      ~/.virtualenvs/deep/lib/python3.6/site-packages/numpy/core/function_base.py
+[0;31mType:[0m      function
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pot</span><span class="p">()</span>
+</pre></div>
                 
                   
                 

@@ -47,7 +47,7 @@
       
         
         
-        <meta name="theme-color" content="#3f51b5">
+        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -73,7 +73,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="blue">
   
     <svg class="md-svg">
       <defs>
@@ -259,8 +259,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basics" class="md-nav__link">
-    basics
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-basics" class="md-nav__link">
+    git basics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    GitHub
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forking" class="md-nav__link">
+    forking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-requests" class="md-nav__link">
+    pull requests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    Exercise
   </a>
   
 </li>
@@ -325,8 +366,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../python/assignment0/" title="Assignment 0" class="md-nav__link">
-      Assignment 0
+    <a href="../python/exercise/" title="Exercise" class="md-nav__link">
+      Exercise
     </a>
   </li>
 
@@ -386,8 +427,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basics" class="md-nav__link">
-    basics
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-basics" class="md-nav__link">
+    git basics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    GitHub
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forking" class="md-nav__link">
+    forking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-requests" class="md-nav__link">
+    pull requests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    Exercise
   </a>
   
 </li>
@@ -412,31 +494,52 @@
                 
                 
                 <h1 id="git-github">Git &amp; Github<a class="headerlink" href="#git-github" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p><code>git</code> is a decentralized version control system:  </p>
 <ul>
-<li>so you don't lose your code</li>
+<li>helps you not lose your code!</li>
 <li>track and merge concurrent changes to a repository of files</li>
-<li>collaborate w/ several authors in a principled manner</li>
+<li>collaborate with several authors</li>
 <li>decentralized across machines (can push &amp; pull changes from several remote repositories)</li>
 <li><code>git</code> is the CLI, GUIs exist</li>
 </ul>
 <p><a href="https://github.com">github.com</a> is a popular host of git repositories.</p>
-<h2 id="basics">basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
+<h2 id="git-basics"><code>git</code> basics<a class="headerlink" href="#git-basics" title="Permanent link">&para;</a></h2>
+<p>Git represents </p>
 <ul>
 <li>commits</li>
-<li>branches
-*</li>
+<li>branches</li>
+<li>useful refs</li>
 </ul>
-<p>Intro to Git / Github - markdown document on project repo
-Basic Idea of VCS:
-Dont lose your code
-Collaborate with people in a principled manner
-+ great things like code review!
-Installation / Setup
-Fork the project repo
-Add yourself to a list of contributors!
-Have a file that is like a list of names / introductions
-Make a Pull Request to the project repo!</p>
+<h2 id="github">GitHub<a class="headerlink" href="#github" title="Permanent link">&para;</a></h2>
+<p>In addition to hosting git repositories, GitHub offers collaborative features
+such as issue tracking &amp; pull requests.  Pull requests are essentially a
+request to merge changes from a downstream fork to an upstream repo.  </p>
+<h3 id="forking">forking<a class="headerlink" href="#forking" title="Permanent link">&para;</a></h3>
+<p>Forking <code>foo/repository</code> create's a new repo, <code>repository</code>, under your
+account with the same git history as <code>foo/repository</code>.</p>
+<h3 id="pull-requests">pull requests<a class="headerlink" href="#pull-requests" title="Permanent link">&para;</a></h3>
+<p>To suggest changes to repositories on github the most common workflow is to
+fork the repository, make changes on your fork, and make a pull request from
+your branch onto an upstream branch.  </p>
+<p>Example:  Alice has a collection of machine learning algorithms in
+alice/machine-learning.  Bob would like to add an example of a deep neural
+network to Alice's repository.  Bob forks alice/machine-learning to
+bob/machine-learning, and pushes his changes to the DEEP branch on
+bob/machine-learning.  Bob then makes a pull request from bob/machine-learning
+to alice/machine-learning.</p>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Resources:
+* <a href="https://help.github.com/en/articles/set-up-git">https://help.github.com/en/articles/set-up-git</a>
+* <a href="https://gist.github.com/derhuerst/1b15ff4652a867391f03">https://gist.github.com/derhuerst/1b15ff4652a867391f03</a>
+* <a href="https://lab.github.com/githubtraining/introduction-to-github">https://lab.github.com/githubtraining/introduction-to-github</a></p>
+<ol>
+<li>Install a git client</li>
+<li>Make a GitHub account</li>
+<li>Fork this repository</li>
+<li>Add your name and a short description about yourself to: </li>
+<li>Make a pull request against this repository!</li>
+</ol>
                 
                   
                 
