@@ -1,5 +1,0 @@
-# Git & Github
-
-## basic idea
-
-## 

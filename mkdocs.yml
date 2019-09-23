@@ -1,10 +1,11 @@
 site_name: DEEP (Data Education and Exploration Project)
-docs_dir: 'site'
+docs_dir: 'deep-site'
+site_dir: 'site'
 theme:
   name: 'material'
   palette:
-    primary: 'indigo'
-    accent: 'indigo'
+    primary: 'blue grey'
+    accent: 'blue'
   logo:
     icon: 'cloud'
   language: 'en'
@@ -45,7 +46,10 @@ nav:
   - Overview: index.md
   - Curriculum:
     - Git & Github: curriculum/git.md
-    - Python Basics: curriculum/python.ipynb
+    - Python:
+      - Installation: curriculum/python/installation.md
+      - Basics: curriculum/python/basics.ipynb
+      - Exercise: curriculum/python/exercise.ipynb
   - Contributors: contributors.md
   - Acknowledgement: acknowledgement.md
 plugins:

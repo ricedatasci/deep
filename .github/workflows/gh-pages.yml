@@ -1,0 +1,30 @@
+name: github pages
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@master
+
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+        architecture: 'x64'
+
+    - name: install deps & build site
+      run: |
+        pip install -r ./requirements.txt && \
+            pip install git+git://github.com/gvacaliuc/mknotebooks.git && \
+            mkdocs build
+
+    - name: "deploy :ship:"
+      uses: peaceiris/actions-gh-pages@v2.3.2
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./site
