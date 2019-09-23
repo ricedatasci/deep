@@ -316,8 +316,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#2d" class="md-nav__link">
-    2d
+  <a href="#setup-code" class="md-nav__link">
+    setup code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2d-line-plot" class="md-nav__link">
+    2D Line Plot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-surface-plots" class="md-nav__link">
+    3D Surface Plots
   </a>
   
 </li>
@@ -388,8 +402,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#2d" class="md-nav__link">
-    2d
+  <a href="#setup-code" class="md-nav__link">
+    setup code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2d-line-plot" class="md-nav__link">
+    2D Line Plot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-surface-plots" class="md-nav__link">
+    3D Surface Plots
   </a>
   
 </li>
@@ -414,8 +442,9 @@
                 
                 
                 <h1 id="exercise">exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h1>
-<p>Plot some functions!</p>
-<h2 id="2d">2d<a class="headerlink" href="#2d" title="Permanent link">&para;</a></h2>
+<p>Plot some functions!  We've put some example code below to make a funny plot w/ XKCD-style.  Your task is to create a new function to be plotted in 2D and one in 3D.  Feel free to make a funny plot or something more interesting like some <a href="https://en.wikipedia.org/wiki/Test_functions_for_optimization">test functions for optimization</a>.  Alternatively, you could look into other <a href="https://matplotlib.org/tutorials/introductory/pyplot.html">types of matplotlib plots</a> instead of line and surface plots <img alt="😄" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f604.svg" title=":smile:" /></p>
+<h2 id="setup-code">setup code<a class="headerlink" href="#setup-code" title="Permanent link">&para;</a></h2>
+<p>This is some setup code to import the libraries we need and make our plot look nicer.</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 </pre></div>
@@ -424,114 +453,31 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+<h2 id="2d-line-plot">2D Line Plot<a class="headerlink" href="#2d-line-plot" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="err">?</span>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span>[0;31mSignature:[0m
-[0mnp[0m[0;34m.[0m[0mlogspace[0m[0;34m([0m[0;34m[0m
-[0;34m[0m    [0mstart[0m[0;34m,[0m[0;34m[0m
-[0;34m[0m    [0mstop[0m[0;34m,[0m[0;34m[0m
-[0;34m[0m    [0mnum[0m[0;34m=[0m[0;36m50[0m[0;34m,[0m[0;34m[0m
-[0;34m[0m    [0mendpoint[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m[0;34m[0m
-[0;34m[0m    [0mbase[0m[0;34m=[0m[0;36m10.0[0m[0;34m,[0m[0;34m[0m
-[0;34m[0m    [0mdtype[0m[0;34m=[0m[0;32mNone[0m[0;34m,[0m[0;34m[0m
-[0;34m[0m    [0maxis[0m[0;34m=[0m[0;36m0[0m[0;34m,[0m[0;34m[0m
-[0;34m[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;31mDocstring:[0m
-Return numbers spaced evenly on a log scale.
+<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-In linear space, the sequence starts at ``base ** start``
-(`base` to the power of `start`) and ends with ``base ** stop``
-(see `endpoint` below).
-
-.. versionchanged:: 1.16.0
-    Non-scalar `start` and `stop` are now supported.
-
-Parameters
-----------
-start : array_like
-    ``base ** start`` is the starting value of the sequence.
-stop : array_like
-    ``base ** stop`` is the final value of the sequence, unless `endpoint`
-    is False.  In that case, ``num + 1`` values are spaced over the
-    interval in log-space, of which all but the last (a sequence of
-    length `num`) are returned.
-num : integer, optional
-    Number of samples to generate.  Default is 50.
-endpoint : boolean, optional
-    If true, `stop` is the last sample. Otherwise, it is not included.
-    Default is True.
-base : float, optional
-    The base of the log space. The step size between the elements in
-    ``ln(samples) / ln(base)`` (or ``log_base(samples)``) is uniform.
-    Default is 10.0.
-dtype : dtype
-    The type of the output array.  If `dtype` is not given, infer the data
-    type from the other input arguments.
-axis : int, optional
-    The axis in the result to store the samples.  Relevant only if start
-    or stop are array-like.  By default (0), the samples will be along a
-    new axis inserted at the beginning. Use -1 to get an axis at the end.
-
-    .. versionadded:: 1.16.0
-
-
-Returns
--------
-samples : ndarray
-    `num` samples, equally spaced on a log scale.
-
-See Also
---------
-arange : Similar to linspace, with the step size specified instead of the
-         number of samples. Note that, when used with a float endpoint, the
-         endpoint may or may not be included.
-linspace : Similar to logspace, but with the samples uniformly distributed
-           in linear space, instead of log space.
-geomspace : Similar to logspace, but with endpoints specified directly.
-
-Notes
------
-Logspace is equivalent to the code
-
-&gt;&gt;&gt; y = np.linspace(start, stop, num=num, endpoint=endpoint)
-... # doctest: +SKIP
-&gt;&gt;&gt; power(base, y).astype(dtype)
-... # doctest: +SKIP
-
-Examples
---------
-&gt;&gt;&gt; np.logspace(2.0, 3.0, num=4)
-array([ 100.        ,  215.443469  ,  464.15888336, 1000.        ])
-&gt;&gt;&gt; np.logspace(2.0, 3.0, num=4, endpoint=False)
-array([100.        ,  177.827941  ,  316.22776602,  562.34132519])
-&gt;&gt;&gt; np.logspace(2.0, 3.0, num=4, base=2.0)
-array([4.        ,  5.0396842 ,  6.34960421,  8.        ])
-
-Graphical illustration:
-
-&gt;&gt;&gt; import matplotlib.pyplot as plt
-&gt;&gt;&gt; N = 10
-&gt;&gt;&gt; x1 = np.logspace(0.1, 1, N, endpoint=True)
-&gt;&gt;&gt; x2 = np.logspace(0.1, 1, N, endpoint=False)
-&gt;&gt;&gt; y = np.zeros(N)
-&gt;&gt;&gt; plt.plot(x1, y, &#39;o&#39;)
-[&lt;matplotlib.lines.Line2D object at 0x...&gt;]
-&gt;&gt;&gt; plt.plot(x2, y + 0.5, &#39;o&#39;)
-[&lt;matplotlib.lines.Line2D object at 0x...&gt;]
-&gt;&gt;&gt; plt.ylim([-0.5, 1])
-(-0.5, 1)
-&gt;&gt;&gt; plt.show()
-[0;31mFile:[0m      ~/.virtualenvs/deep/lib/python3.6/site-packages/numpy/core/function_base.py
-[0;31mType:[0m      function
+<span class="c1"># use this context manager to make &quot;xkcd-style&quot; plots!</span>
+<span class="k">with</span> <span class="n">plt</span><span class="o">.</span><span class="n">xkcd</span><span class="p">():</span>
+    <span class="c1"># we might be missing some xkcd fonts, so we&#39;ll ignore those</span>
+    <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span> 
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">y</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Expected GPA vs. Semester Progress&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;E[GPA]&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Days from Semester Start&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-
-<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">pot</span><span class="p">()</span>
+<p><img alt="png" src="output_7_0.png" /></p>
+<h2 id="3d-surface-plots">3D Surface Plots<a class="headerlink" href="#3d-surface-plots" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>
 </pre></div>
                 
                   
