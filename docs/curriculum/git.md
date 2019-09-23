@@ -14,7 +14,7 @@
 
 ## `git` basics
 
-Git represents 
+Git tracks change to files using a merkle-tree of 
 
 * commits
 * branches
