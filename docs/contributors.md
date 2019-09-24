@@ -13,3 +13,6 @@ I enjoy playing ultimate frisbee, browsing hacker news, and listening to music.
 playing board games and ping pong. This summer I lived and worked in Norway!
 
 ## Participants
+
+**Jamie Chen**: Sophomore at Hanszen from Taiwan studying Computational
+and Applied Math and Cognitive Science. 
