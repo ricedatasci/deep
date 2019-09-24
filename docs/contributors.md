@@ -19,10 +19,14 @@ playing smash, impersonating Halo characters, and napping with my blinds open.
 
 ## Participants
 
+
+**Henry Creamer**: Junior at Lovett studying Computer Science and Statistics. In my free time I enjoy hiking, camping, and playing soccer.
+
 **Jamie Chen**: Sophomore at Hanszen from Taiwan studying Computational
 and Applied Math and Cognitive Science. 
 
 **Kevin Zheng**: Sophomore at Baker studing Physics and Mathematics.
 
 **Paul Gao**: Junior at Baker studying Computer Science and Statistics.
+
 
