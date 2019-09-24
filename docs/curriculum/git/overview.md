@@ -12,13 +12,37 @@
 
 [github.com](https://github.com) is a popular host of git repositories.
 
-## `git` basics
+## Basics of Version Control with `git`
 
-Git tracks change to files using a merkle-tree of 
+`git` uses a [merkle-tree](https://en.wikipedia.org/wiki/Merkle_tree) to track
+diffs.  A commit represents a diff between two states of the repository.  A
+commit hash is composed of the data composed in the diff and the previous
+commit's hash.
 
-* commits
-* branches
-* useful refs
+```shell
+$ # make changes to some files
+$ git add models/cnn.py optimizers/adam.py
+$ git commit -m "CNN: added 4th convolution block and fixed Adam convergence issue"
+```
+
+Commits are chained together in branches.  Branches can exist alongside
+each other and generally represent new features or ideas.
+
+```shell
+$ git checkout -b "sift-feature-extraction"
+$ # add code to use SIFT features
+$ git commit "feat-ex: Implemented SIFT to extract local image features"
+```
+
+After you've done some work, you'll generally push up to github.com or another
+repository host! Generally you'll set up git remotes when cloning or
+initializing a project, so that you can push like so:
+
+```shell
+$ # after you've committed all your work
+$ # origin is a common name for the default remote
+$ git push origin sift-feature-extraction
+```
 
 ## GitHub
 
@@ -43,17 +67,3 @@ network to Alice's repository.  Bob forks alice/machine-learning to
 bob/machine-learning, and pushes his changes to the DEEP branch on
 bob/machine-learning.  Bob then makes a pull request from bob/machine-learning
 to alice/machine-learning.
-
-## Exercise
-
-1. Install a git client
-1. Make a GitHub account
-1. Fork this repository
-1. Add your name and a short description about yourself to [the contributors page](../../contributors)
-1. Make a pull request against this repository!
-
-Resources:  
-
-* https://help.github.com/en/articles/set-up-git
-* https://gist.github.com/derhuerst/1b15ff4652a867391f03
-* https://lab.github.com/githubtraining/introduction-to-github

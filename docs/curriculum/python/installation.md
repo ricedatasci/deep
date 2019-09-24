@@ -7,18 +7,9 @@
     [repo2docker](https://github.com/jupyter/repo2docker) to create an
     environment from a git repository. :tada:
 
-
 ## Anaconda
 
-The Anconda Distribution is a pretty solid bet:
-https://docs.anaconda.com/anaconda/install/
+The Anconda Distribution is a pretty solid bet if you don't already have Python
+installed: https://docs.anaconda.com/anaconda/install/
 
 ![Anaconda Navigator](https://miro.medium.com/max/2730/1*rXvbgf33YhnNrqD3KqXVDw.png)
-
-## Environments
-
-Anaconda has a concept of an "environment", which is a self-contained workspace
-which isolates different projects dependencies.  
-
-For example, you might have an environment dedicated to a specific project, or
-type of programming.  

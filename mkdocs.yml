@@ -19,17 +19,17 @@ extra:
 nav:
   - Overview: index.md
   - Curriculum:
-    - Git & Github: curriculum/git.md
+    - Git:
+      - Overview: curriculum/git/overview.md
+      - Exercise: curriculum/git/exercise.md
     - Python:
       - Installation: curriculum/python/installation.md
-      - Basics: curriculum/python/basics.ipynb
+      - Overview: curriculum/python/overview.ipynb
       - Exercise: curriculum/python/exercise.ipynb
   - Contributors: contributors.md
-  - Acknowledgement: acknowledgement.md
 plugins:
   - mknotebooks:
       execute: true
-      #preamble: "pandas_to_markdown.py"
 markdown_extensions:
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
@@ -56,5 +56,3 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-extra_css:
-  - 'stylesheets/extra.css'
