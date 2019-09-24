@@ -18,3 +18,6 @@ playing board games and ping pong. This summer I lived and worked in Norway!
 and Applied Math and Cognitive Science. 
 
 **Kevin Zheng**: Sophomore at Baker studing Physics and Mathematics.
+
+**Paul Gao**: Junior at Baker studying Computer Science and Statistics.
+
