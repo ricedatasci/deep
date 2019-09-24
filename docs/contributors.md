@@ -13,3 +13,5 @@ I enjoy playing ultimate frisbee, browsing hacker news, and listening to music.
 playing board games and ping pong. This summer I lived and worked in Norway!
 
 ## Participants
+
+**Henry Creamer**: Junior at Lovett studying Computer Science and Statistics. In my free time I enjoy hiking, camping, and playing soccer.
