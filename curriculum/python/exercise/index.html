@@ -63,8 +63,6 @@
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
-    
     
       
     
@@ -231,10 +229,46 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../git/" title="Git & Github" class="md-nav__link">
-      Git & Github
+    <a href="../../git/overview/" title="Overview" class="md-nav__link">
+      Overview
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/exercise/" title="Exercise" class="md-nav__link">
+      Exercise
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -277,8 +311,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../basics/" title="Basics" class="md-nav__link">
-      Basics
+    <a href="../overview/" title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -317,21 +351,14 @@
       
         <li class="md-nav__item">
   <a href="#setup-code" class="md-nav__link">
-    setup code
+    Setup code
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2d-line-plot" class="md-nav__link">
-    2D Line Plot
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3d-surface-plots" class="md-nav__link">
-    3D Surface Plots
+  <a href="#line-plot" class="md-nav__link">
+    Line Plot
   </a>
   
 </li>
@@ -369,18 +396,6 @@
   </li>
 
     
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../acknowledgement.md" title="Acknowledgement" class="md-nav__link">
-      Acknowledgement
-    </a>
-  </li>
-
-    
   </ul>
 </nav>
                   </div>
@@ -403,21 +418,14 @@
       
         <li class="md-nav__item">
   <a href="#setup-code" class="md-nav__link">
-    setup code
+    Setup code
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2d-line-plot" class="md-nav__link">
-    2D Line Plot
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3d-surface-plots" class="md-nav__link">
-    3D Surface Plots
+  <a href="#line-plot" class="md-nav__link">
+    Line Plot
   </a>
   
 </li>
@@ -441,10 +449,10 @@
                   <a href="https://github.com/ricedatasci/deep/edit/master/docs/curriculum/python/exercise.ipynb" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="exercise">exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h1>
-<p>Plot some functions!  We've put some example code below to make a funny plot w/ XKCD-style.  Your task is to create a new function to be plotted in 2D and one in 3D.  Feel free to make a funny plot or something more interesting like some <a href="https://en.wikipedia.org/wiki/Test_functions_for_optimization">test functions for optimization</a>.  Alternatively, you could look into other <a href="https://matplotlib.org/tutorials/introductory/pyplot.html">types of matplotlib plots</a> instead of line and surface plots <img alt="😄" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f604.svg" title=":smile:" /></p>
-<h2 id="setup-code">setup code<a class="headerlink" href="#setup-code" title="Permanent link">&para;</a></h2>
-<p>This is some setup code to import the libraries we need and make our plot look nicer.</p>
+                <h1 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h1>
+<p>Plot some functions!  We've put some example code below to make a funny plot w/ XKCD-style.  Your task is to create a new function to be plotted in 2D or 3D.  Feel free to make a funny plot or something more interesting like some <a href="https://en.wikipedia.org/wiki/Test_functions_for_optimization">test functions for optimization</a>.  Alternatively, you could look into other <a href="https://matplotlib.org/tutorials/introductory/pyplot.html">types of matplotlib plots</a> instead of line and surface plots <img alt="😄" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f604.svg" title=":smile:" /></p>
+<h2 id="setup-code">Setup code<a class="headerlink" href="#setup-code" title="Permanent link">&para;</a></h2>
+<p>Here we import the libraries we need and add some setup code to make our plots look a bit nicer.</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 </pre></div>
@@ -453,7 +461,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span>
 </pre></div>
 
-<h2 id="2d-line-plot">2D Line Plot<a class="headerlink" href="#2d-line-plot" title="Permanent link">&para;</a></h2>
+<h2 id="line-plot">Line Plot<a class="headerlink" href="#line-plot" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
@@ -476,9 +484,6 @@
 </pre></div>
 
 <p><img alt="png" src="output_7_0.png" /></p>
-<h2 id="3d-surface-plots">3D Surface Plots<a class="headerlink" href="#3d-surface-plots" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>
-</pre></div>
                 
                   
                 
@@ -499,7 +504,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../basics/" title="Basics" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../overview/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -508,7 +513,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Basics
+                Overview
               </span>
             </div>
           </a>
