@@ -12,6 +12,21 @@ I enjoy playing ultimate frisbee, browsing hacker news, and listening to music.
 **Cole Morgan**: Junior at Wiess studying Statistics. In my free time I enjoy
 playing board games and ping pong. This summer I lived and worked in Norway!
 
+![Muthu Chidambaram](./imgs/muthu-chid.jpg)
+
+**Muthu Chidambaram**: Junior at Wiess studying Computer Science. In my free time I enjoy
+playing smash, impersonating Halo characters, and napping with my blinds open. 
+
 ## Participants
 
+
 **Henry Creamer**: Junior at Lovett studying Computer Science and Statistics. In my free time I enjoy hiking, camping, and playing soccer.
+
+**Jamie Chen**: Sophomore at Hanszen from Taiwan studying Computational
+and Applied Math and Cognitive Science. 
+
+**Kevin Zheng**: Sophomore at Baker studing Physics and Mathematics.
+
+**Paul Gao**: Junior at Baker studying Computer Science and Statistics.
+
+
