@@ -29,4 +29,6 @@ and Applied Math and Cognitive Science.
 
 **Paul Gao**: Junior at Baker studying Computer Science and Statistics.
 
+**Vinay Tummarakota**: Freshman at Hanszen studying Computer Science. I enjoy beatboxing for a cappella and dancing for Rice Riyaaz (bollywood fusion dance team). 
+
 
