@@ -29,4 +29,4 @@ and Applied Math and Cognitive Science.
 
 **Paul Gao**: Junior at Baker studying Computer Science and Statistics.
 
-
+**Priyansh Lunia**: Junior at Duncan majoring in Physics, and minoring in CAAM! Data is pretty cool. 
