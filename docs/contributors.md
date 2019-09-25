@@ -29,4 +29,6 @@ and Applied Math and Cognitive Science.
 
 **Paul Gao**: Junior at Baker studying Computer Science and Statistics.
 
+**Chiraag Kaushik**: Junior at Will Rice studying Electrical and Computer Engineering.
+
 
