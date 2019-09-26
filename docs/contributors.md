@@ -22,6 +22,8 @@ and Applied Math and Cognitive Science.
 
 **Paul Gao**: Junior at Baker studying Computer Science and Statistics.
 
+**Vinay Tummarakota**: Freshman at Hanszen studying Computer Science. I enjoy beatboxing for a cappella and dancing for Rice Riyaaz (bollywood fusion dance team). 
+
 **Chiraag Kaushik**: Junior at Will Rice studying Electrical and Computer Engineering.
 
 **Priyansh Lunia**: Junior at Duncan majoring in Physics, and minoring in CAAM! Data is pretty cool. 
