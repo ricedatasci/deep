@@ -31,4 +31,4 @@ and Applied Math and Cognitive Science.
 
 **Hannah Lei**: Sophomore at Jones studying Computer Science. In my free time, I enjoy playing the guitar and violin and basketball.
 
-
+**Hanna Gratch**: Junior at Hanszen studying Sociology.
