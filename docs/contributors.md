@@ -29,6 +29,8 @@ and Applied Math and Cognitive Science.
 
 **Paul Gao**: Junior at Baker studying Computer Science and Statistics.
 
+**Ryan Knightly**: Freshman at Hanszen studying Computer Science.
+
 **Hannah Lei**: Sophomore at Jones studying Computer Science. In my free time, I enjoy playing the guitar and violin and basketball.
 
 **Hanna Gratch**: Junior at Hanszen studying Sociology.
