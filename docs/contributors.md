@@ -22,6 +22,8 @@ and Applied Math and Cognitive Science.
 
 **Paul Gao**: Junior at Baker studying Computer Science and Statistics.
 
+**Chiraag Kaushik**: Junior at Will Rice studying Electrical and Computer Engineering.
+
 **Priyansh Lunia**: Junior at Duncan majoring in Physics, and minoring in CAAM! Data is pretty cool. 
 
 **Ryan Knightly**: Freshman at Hanszen studying Computer Science.
