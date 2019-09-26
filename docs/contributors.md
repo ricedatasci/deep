@@ -2,17 +2,11 @@
 
 ## Mentors
 
-![Gabe Vacaliuc](https://s.gravatar.com/avatar/d18596782d2a75d869aef7bc22b74764?s=80)
-
 **Gabe Vacaliuc**: Senior at Hanszen studying Computer Science. In my free time
 I enjoy playing ultimate frisbee, browsing hacker news, and listening to music.
 
-![Cole Morgan](./imgs/cole-morgan.jpg)
-
 **Cole Morgan**: Junior at Wiess studying Statistics. In my free time I enjoy
 playing board games and ping pong. This summer I lived and worked in Norway!
-
-![Muthu Chidambaram](./imgs/muthu-chid.jpg)
 
 **Muthu Chidambaram**: Junior at Wiess studying Computer Science. In my free time I enjoy
 playing smash, impersonating Halo characters, and napping with my blinds open. 
@@ -36,3 +30,5 @@ and Applied Math and Cognitive Science.
 **Hanna Gratch**: Junior at Hanszen studying Sociology.
 
 **Anthony Nguyen**: Sophomore at Hanszen studying Statistics. Biiig fan of Spotify playlists, naps, and spinach artichoke dip.
+
+**Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
