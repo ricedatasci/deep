@@ -37,3 +37,5 @@ and Applied Math and Cognitive Science.
 **Anthony Nguyen**: Sophomore at Hanszen studying Statistics. Biiig fan of Spotify playlists, naps, and spinach artichoke dip.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
+
+**Adrienne Li**: Freshman at Brown studying Computer Science. I enjoy swimming, pie, and playing cards.
