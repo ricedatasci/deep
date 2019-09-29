@@ -37,3 +37,5 @@ and Applied Math and Cognitive Science.
 **Anthony Nguyen**: Sophomore at Hanszen studying Statistics. Biiig fan of Spotify playlists, naps, and spinach artichoke dip.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
+
+**Franklin Zhang**: Junior at Duncan studying Computer Science with a minor in Data Science. Currently enjoying the Soulsborne series (Dark Souls, Bloodborne, Sekiro) and dancing (I'm a part of BASYK). 
