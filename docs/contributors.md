@@ -37,3 +37,5 @@ and Applied Math and Cognitive Science.
 **Anthony Nguyen**: Sophomore at Hanszen studying Statistics. Biiig fan of Spotify playlists, naps, and spinach artichoke dip.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
+
+**Shreya Nidadavolu**: Sophomore at Wiess studying CAAM/Computer Science. I also enjoy musical activities like singing and dancing!
