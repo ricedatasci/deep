@@ -11,6 +11,8 @@ playing board games and ping pong. This summer I lived and worked in Norway!
 **Muthu Chidambaram**: Junior at Wiess studying Computer Science. In my free time I enjoy
 playing smash, impersonating Halo characters, and napping with my blinds open. 
 
+**Wei Wu**: Masters of Computational and Applied Math. Math BS '17 at Sid Rich. In my free time I play competitive soccer and learn new (human) languages. 
+
 ## Participants
 
 **Henry Creamer**: Junior at Lovett studying Computer Science and Statistics. In my free time I enjoy hiking, camping, and playing soccer.
