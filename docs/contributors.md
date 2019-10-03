@@ -39,6 +39,8 @@ and Applied Math and Cognitive Science.
 **Anthony Nguyen**: Sophomore at Hanszen studying Statistics. Biiig fan of Spotify playlists, naps, and spinach artichoke dip.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
+ 
+**Adelle Jia**: sophomore and hanszen studying neuro/caam
 
 **Marc Shen**: Freshman at Hanszen studying Computer Science and possibly CAAM.
 
