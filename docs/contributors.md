@@ -40,6 +40,8 @@ and Applied Math and Cognitive Science.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
 
+**Jack Zhang**: Freshman at Will Rice studying Computational and Applied Mathematics, potentiallly majoring in Data Science.
+
 **Eduardo Landin**: Sophomore at Lovett studying...something, maybe Statistics.
 
 **Joshua Bae**: Junior at Lovett studying Electrical Engineering.
