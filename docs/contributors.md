@@ -40,6 +40,8 @@ and Applied Math and Cognitive Science.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
 
+**Shreya Nidadavolu**: Sophomore at Wiess studying CAAM/Computer Science. I also enjoy musical activities like singing and dancing!
+
 **Vineel Mallepalli**: Junior at Wiess studying Computer Science and Psychology. Love playing chess and Smash in my free time.
 
 **Bill Qian**: Freshman. Comp Sci. HFH.
