@@ -40,4 +40,6 @@ and Applied Math and Cognitive Science.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
 
-**Kyle Manning**: Junior at Duncan studying Statistics and Economics. 
+**Angie Chen**: Sophomore at Martel studying Computer Science. I enjoy running, playing piano, and watching Survivor.
+
+**Kyle Manning**: Junior at Duncan studying Statistics and Economics.
