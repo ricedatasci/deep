@@ -40,6 +40,8 @@ and Applied Math and Cognitive Science.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
 
+**Bill Qian**: Freshman. Comp Sci. HFH.
+
 **Ryan Draper**: Freshman at Lovett studying Computer Science. I enjoy tennis, spikeball, and cooking.
 
 **Megan Xiao**: Freshman at Duncan studying Cog Sci and Math Econ
