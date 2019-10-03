@@ -40,8 +40,6 @@ and Applied Math and Cognitive Science.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
 
-**Marc Shen**: Freshman at Hanszen studying Computer Science and possibly CAAM.
-
 **Quan Le**: Freshman at Will Rice studying Computational and Applied Mathematics and Physics. Avid dancer, martial artist, and sleeper.
 
 **Shreya Nidadavolu**: Sophomore at Wiess studying CAAM/Computer Science. I also enjoy musical activities like singing and dancing!
