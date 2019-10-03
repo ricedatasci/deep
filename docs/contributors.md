@@ -40,6 +40,8 @@ and Applied Math and Cognitive Science.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
 
+**Jonathan Sheng**: Freshman at Hanszen studying Computer Science and Data Science.
+
 **Jonathan Poss**: Freshman at Hanszen studying Computer Science and Mathematics.
 
 **Joanne Zhou**: Junior at Brown studying statistics, minor in finance and data science. I love boba.
