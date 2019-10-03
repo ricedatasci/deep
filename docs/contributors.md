@@ -40,6 +40,8 @@ and Applied Math and Cognitive Science.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
 
+**Franklin Zhang**: Junior at Duncan studying Computer Science with a minor in Data Science. Currently enjoying the Soulsborne series (Dark Souls, Bloodborne, Sekiro) and dancing (I'm a part of BASYK). 
+
 **Angie Chen**: Sophomore at Martel studying Computer Science. I enjoy running, playing piano, and watching Survivor.
 
 **Kyle Manning**: Junior at Duncan studying Statistics and Economics.
