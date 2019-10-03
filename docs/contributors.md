@@ -40,6 +40,8 @@ and Applied Math and Cognitive Science.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
 
+**Eduardo Landin**: Sophomore at Lovett studying...something, maybe Statistics.
+
 **Joshua Bae**: Junior at Lovett studying Electrical Engineering.
 
 **Adrienne Li**: Freshman at Brown studying Computer Science. I enjoy swimming, pie, and playing cards.
