@@ -40,6 +40,8 @@ and Applied Math and Cognitive Science.
 
 **Irene Gu**: Sophomore at Jones studying Computer Science and Statistics.
 
+**Vineel Mallepalli**: Junior at Wiess studying Computer Science and Psychology. Love playing chess and Smash in my free time.
+
 **Bill Qian**: Freshman. Comp Sci. HFH.
 
 **Ryan Draper**: Freshman at Lovett studying Computer Science. I enjoy tennis, spikeball, and cooking.
