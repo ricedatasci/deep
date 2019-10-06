@@ -7,5 +7,7 @@ make a PR!
 ## python
 
 * pandas: 
-    * https://github.com/dlab-berkeley/introduction-to-pandas
-    * 
+    * [Introduction to Pandas Workshop](https://github.com/dlab-berkeley/introduction-to-pandas)
+    * [10 minutes to pandas]( https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html )
+* matplotlib:
+    * [Pyplot tutorial](https://matplotlib.org/tutorials/introductory/pyplot.html)

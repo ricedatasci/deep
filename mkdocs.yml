@@ -28,7 +28,8 @@ nav:
       - Exercise: curriculum/python/exercise.ipynb
     - Pandas: curriculum/examples/introduction-to-pandas.ipynb
     - Examples:
-      - Dataset: curriculum/examples/dataset.ipynb
+      - "US Senate Dataset": curriculum/examples/dataset.ipynb
+      - EDA: curriculum/examples/eda.ipynb
   - Contributors: contributors.md
   - Resources: resources.md
 plugins:
