@@ -26,7 +26,11 @@ nav:
       - Installation: curriculum/python/installation.md
       - Overview: curriculum/python/overview.ipynb
       - Exercise: curriculum/python/exercise.ipynb
+    - Pandas: curriculum/examples/introduction-to-pandas.ipynb
+    - Examples:
+      - Dataset: curriculum/examples/dataset.ipynb
   - Contributors: contributors.md
+  - Resources: resources.md
 plugins:
   - mknotebooks:
       execute: true
