@@ -373,15 +373,15 @@
       
         <li class="md-nav__item">
   <a href="#1-the-dataframe-importing-data-and-summary-statistics" class="md-nav__link">
-    1. The DataFrame: Importing Data and Summary Statistics
+    1. The DataFrame: Importing Data and Summary Statistics 
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#import-data-from-a-url" class="md-nav__link">
-    Import Data From A URL
+  <a href="#challenge-1-import-data-from-a-url" class="md-nav__link">
+    Challenge 1: Import Data From A URL
   </a>
   
 </li>
@@ -690,15 +690,15 @@
       
         <li class="md-nav__item">
   <a href="#1-the-dataframe-importing-data-and-summary-statistics" class="md-nav__link">
-    1. The DataFrame: Importing Data and Summary Statistics
+    1. The DataFrame: Importing Data and Summary Statistics 
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#import-data-from-a-url" class="md-nav__link">
-    Import Data From A URL
+  <a href="#challenge-1-import-data-from-a-url" class="md-nav__link">
+    Challenge 1: Import Data From A URL
   </a>
   
 </li>
@@ -909,7 +909,8 @@
                   <a href="https://github.com/ricedatasci/deep/edit/master/docs/curriculum/examples/introduction-to-pandas.ipynb" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="pandas"><code>pandas</code> <a href="https://mybinder.org/v2/gh/dlab-berkeley/introduction-to-pandas/master?filepath=introduction-to-pandas.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a><a class="headerlink" href="#pandas" title="Permanent link">&para;</a></h1>
+                <h1 id="pandas"><code>pandas</code><a class="headerlink" href="#pandas" title="Permanent link">&para;</a></h1>
+<p>Originally from a Berkeley Pandas Workshop: <a href="https://github.com/dlab-berkeley/introduction-to-pandas"><code>dlab-berkeley/introduction-to-pandas</code></a></p>
 <p><code>pandas</code> is designed to make it easier to work with structured data. Most of the analyses you might perform will likely involve using tabular data, e.g., from .csv files or relational databases (e.g., SQL). The <code>DataFrame</code> object in <code>pandas</code> is "a two-dimensional tabular, column-oriented data structure with both row and column labels."</p>
 <p>If you're curious:</p>
 <blockquote>
@@ -927,7 +928,9 @@
 <p>8 - <a href="#section8">Handling Missing Values (Boolean Indexing)</a><br></p>
 <p>9 - <a href="#section9">Sorting Values</a><br></p>
 <p>10 - <a href="#section10">Plotting In Pandas</a><br></p>
-<h2 id="1-the-dataframe-importing-data-and-summary-statistics">1. The DataFrame: Importing Data and Summary Statistics<a class="headerlink" href="#1-the-dataframe-importing-data-and-summary-statistics" title="Permanent link">&para;</a></h2>
+<h2 id="1-the-dataframe-importing-data-and-summary-statistics">1. The DataFrame: Importing Data and Summary Statistics <a id="section1"/><a class="headerlink" href="#1-the-dataframe-importing-data-and-summary-statistics" title="Permanent link">&para;</a></h2>
+<p>The data used in these examples is available in the following <a href="https://github.com/dlab-berkeley/introduction-to-pandas">GitHub repository</a>. If you've <a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone">cloned that repo</a>, which is the recommended approach, you'll have everything you need to run this notebook. Otherwise, you can download the data file(s) from the above link. (Note: this notebook assumes that the data files are in a directory named <code>data/</code> found within your current working directory.)</p>
+<p>For this example, we're working with European unemployment data from Eurostat, which is hosted by <a href="https://code.google.com/p/dspl/downloads/list">Google</a>. There are several .csv files that we'll work with in this workshop.</p>
 <p>Let's begin by importing <code>pandas</code> using the conventional abbreviation.</p>
 <div class="codehilite"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 
@@ -943,188 +946,30 @@
 
 <p>The <code>read_csv()</code> function in <code>pandas</code> allows us to easily import our data. By default, it assumes the data is comma-delimited. However, you can specify the delimiter used in your data (e.g., tab, semicolon, pipe, etc.). There are several parameters that you can specify. See the documentation <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html">here</a>. <code>read_csv()</code> returns a <code>DataFrame</code>.</p>
 <p>Notice that we call <code>read_csv()</code> using the <code>pd</code> abbreviation from the import statement above.</p>
-<div class="codehilite"><pre><span></span><span class="n">unemployment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/dlab-berkeley/introduction-to-pandas/master/data/countries.csv&#39;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/country_total.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
 <p>Great! You've created a <code>pandas</code> <code>DataFrame</code>. We can look at our data by using the <code>.head()</code> method. By default, this shows the header (column names) and the first five rows. Passing an integer, <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, to <code>.head()</code> returns that number of rows. To see the last <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> rows, use <code>.tail()</code>.</p>
 <div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country</th>
-      <th>google_country_code</th>
-      <th>country_group</th>
-      <th>name_en</th>
-      <th>name_fr</th>
-      <th>name_de</th>
-      <th>latitude</th>
-      <th>longitude</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>at</td>
-      <td>AT</td>
-      <td>eu</td>
-      <td>Austria</td>
-      <td>Autriche</td>
-      <td>Österreich</td>
-      <td>47.696554</td>
-      <td>13.345980</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>be</td>
-      <td>BE</td>
-      <td>eu</td>
-      <td>Belgium</td>
-      <td>Belgique</td>
-      <td>Belgien</td>
-      <td>50.501045</td>
-      <td>4.476674</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>bg</td>
-      <td>BG</td>
-      <td>eu</td>
-      <td>Bulgaria</td>
-      <td>Bulgarie</td>
-      <td>Bulgarien</td>
-      <td>42.725674</td>
-      <td>25.482322</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>hr</td>
-      <td>HR</td>
-      <td>non-eu</td>
-      <td>Croatia</td>
-      <td>Croatie</td>
-      <td>Kroatien</td>
-      <td>44.746643</td>
-      <td>15.340844</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>cy</td>
-      <td>CY</td>
-      <td>eu</td>
-      <td>Cyprus</td>
-      <td>Chypre</td>
-      <td>Zypern</td>
-      <td>35.129141</td>
-      <td>33.428682</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
 <p>To find the number of rows, you can use the <code>len()</code> function. Alternatively, you can use the <code>shape</code> attribute.</p>
 <div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
-
-<div class="codehilite"><pre><span></span>(30, 8)
-</pre></div>
-
 
 <p>There are 20,796 rows and 5 columns.</p>
 <p>A useful method that generates various summary statistics is <code>.describe()</code>.</p>
 <div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>latitude</th>
-      <th>longitude</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>count</td>
-      <td>30.000000</td>
-      <td>30.000000</td>
-    </tr>
-    <tr>
-      <td>mean</td>
-      <td>49.092609</td>
-      <td>14.324579</td>
-    </tr>
-    <tr>
-      <td>std</td>
-      <td>7.956624</td>
-      <td>11.257010</td>
-    </tr>
-    <tr>
-      <td>min</td>
-      <td>35.129141</td>
-      <td>-8.239122</td>
-    </tr>
-    <tr>
-      <td>25%</td>
-      <td>43.230916</td>
-      <td>6.979186</td>
-    </tr>
-    <tr>
-      <td>50%</td>
-      <td>49.238087</td>
-      <td>14.941462</td>
-    </tr>
-    <tr>
-      <td>75%</td>
-      <td>54.090400</td>
-      <td>23.351690</td>
-    </tr>
-    <tr>
-      <td>max</td>
-      <td>64.950159</td>
-      <td>35.439795</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
 <p>You may have noticed that the "count" is lower for the unemployment rate. This is because the summary statistics are based on <em>non-missing</em> values and count reflects that.</p>
 <p>The values depend on what it's called on. If the <code>DataFrame</code> includes both numeric and object (e.g., strings) <code>dtype</code>s, it will default to summarizing the numeric data. If <code>.describe()</code> is called on strings, for example, it will return the count, number of unique values, and the most frequent value along with its count.</p>
-<h3 id="import-data-from-a-url">Import Data From A URL<a class="headerlink" href="#import-data-from-a-url" title="Permanent link">&para;</a></h3>
+<h3 id="challenge-1-import-data-from-a-url">Challenge 1: Import Data From A URL<a class="headerlink" href="#challenge-1-import-data-from-a-url" title="Permanent link">&para;</a></h3>
 <p>Above, we imported the unemployment data using the <code>read_csv</code> function and a relative file path. <code>read_csv</code> is <a href="https://pandas.pydata.org/pandas-docs/version/0.23/generated/pandas.read_csv.html">a very flexible method</a>; it also allows us to import data using a URL as the file path. </p>
 <p>A csv file with data on world countries and their abbreviations is located at <a href="https://raw.githubusercontent.com/dlab-berkeley/introduction-to-pandas/master/data/countries.csv">https://raw.githubusercontent.com/dlab-berkeley/introduction-to-pandas/master/data/countries.csv</a> (saved as a string variable <code>countries_url</code> below).</p>
 <p>Using <code>read_csv</code>, import the country data and save it to the variable <code>countries</code>.</p>
 <div class="codehilite"><pre><span></span><span class="n">countries_url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/dlab-berkeley/introduction-to-pandas/master/data/countries.csv&#39;</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
 
 <h3 id="challenge-2-the-tail-method">Challenge 2: The <code>tail</code> method<a class="headerlink" href="#challenge-2-the-tail-method" title="Permanent link">&para;</a></h3>
@@ -1146,79 +991,13 @@
 <p><strong>YOUR ANSWER HERE</strong></p>
 <h2 id="2-rename-index-and-slice">2. Rename, Index, and Slice <a id="section2"/><a class="headerlink" href="#2-rename-index-and-slice" title="Permanent link">&para;</a></h2>
 <p>Back to the entire unemployment data set. You may have noticed that the <code>month</code> column also includes the year. Let's go ahead and rename it.</p>
-<div class="codehilite"><pre><span></span><span class="n">unemployment</span> <span class="o">=</span> <span class="n">unemployment</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;month&#39;</span> <span class="p">:</span> <span class="s1">&#39;year_month&#39;</span><span class="p">})</span>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;month&#39;</span> <span class="p">:</span> <span class="s1">&#39;year_month&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 <p>The <code>.rename()</code> method allows you to modify index labels and/or column names. As you can see, we passed a <code>dict</code> to the <code>columns</code> parameter, with the original name as the key and the new name as the value. Importantly, we also set the <code>inplace</code> parameter to <code>True</code>, which modifies the <em>actual</em> <code>DataFrame</code>, not a copy of it.</p>
 <p>It might also make sense to separate the data in <code>year_month</code> into two separate columns. To do this, you'll need to know how to select a single column. We can either use bracket (<code>[]</code>) or dot notation (referred to as <em>attribute access</em>).</p>
 <div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;year_month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
-
-<div class="codehilite"><pre><span></span>---------------------------------------------------------------------------
-
-KeyError                                  Traceback (most recent call last)
-
-~/.virtualenvs/deep/lib/python3.6/site-packages/pandas/core/indexes/base.py in get_loc(self, key, method, tolerance)
-   2896             try:
--&gt; 2897                 return self._engine.get_loc(key)
-   2898             except KeyError:
-
-
-pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
-
-
-pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
-
-
-pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
-
-
-pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
-
-
-KeyError: &#39;year_month&#39;
-
-
-During handling of the above exception, another exception occurred:
-
-
-KeyError                                  Traceback (most recent call last)
-
-&lt;ipython-input-26-de3f458c6671&gt; in &lt;module&gt;
-----&gt; 1 unemployment[&#39;year_month&#39;].head()
-
-
-~/.virtualenvs/deep/lib/python3.6/site-packages/pandas/core/frame.py in __getitem__(self, key)
-   2978             if self.columns.nlevels &gt; 1:
-   2979                 return self._getitem_multilevel(key)
--&gt; 2980             indexer = self.columns.get_loc(key)
-   2981             if is_integer(indexer):
-   2982                 indexer = [indexer]
-
-
-~/.virtualenvs/deep/lib/python3.6/site-packages/pandas/core/indexes/base.py in get_loc(self, key, method, tolerance)
-   2897                 return self._engine.get_loc(key)
-   2898             except KeyError:
--&gt; 2899                 return self._engine.get_loc(self._maybe_cast_indexer(key))
-   2900         indexer = self.get_indexer([key], method=method, tolerance=tolerance)
-   2901         if indexer.ndim &gt; 1 or indexer.size &gt; 1:
-
-
-pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
-
-
-pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
-
-
-pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
-
-
-pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
-
-
-KeyError: &#39;year_month&#39;
-</pre></div>
-
 
 <div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">year_month</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -1548,43 +1327,6 @@ KeyError: &#39;year_month&#39;
 <span class="n">unemployment</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span>---------------------------------------------------------------------------
-
-KeyError                                  Traceback (most recent call last)
-
-&lt;ipython-input-24-2105d3d4b287&gt; in &lt;module&gt;
-----&gt; 1 unemployment.sort_values([&#39;name_en&#39;, &#39;year_month&#39;], inplace=True)
-      2 unemployment.reset_index(drop=True, inplace=True)
-
-
-~/.virtualenvs/deep/lib/python3.6/site-packages/pandas/core/frame.py in sort_values(self, by, axis, ascending, inplace, kind, na_position)
-   4984             from pandas.core.sorting import lexsort_indexer
-   4985 
--&gt; 4986             keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
-   4987             indexer = lexsort_indexer(keys, orders=ascending, na_position=na_position)
-   4988             indexer = ensure_platform_int(indexer)
-
-
-~/.virtualenvs/deep/lib/python3.6/site-packages/pandas/core/frame.py in &lt;listcomp&gt;(.0)
-   4984             from pandas.core.sorting import lexsort_indexer
-   4985 
--&gt; 4986             keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
-   4987             indexer = lexsort_indexer(keys, orders=ascending, na_position=na_position)
-   4988             indexer = ensure_platform_int(indexer)
-
-
-~/.virtualenvs/deep/lib/python3.6/site-packages/pandas/core/generic.py in _get_label_or_level_values(self, key, axis)
-   1772             values = self.axes[axis].get_level_values(key)._values
-   1773         else:
--&gt; 1774             raise KeyError(key)
-   1775 
-   1776         # Check for duplicates
-
-
-KeyError: &#39;year_month&#39;
-</pre></div>
-
-
 <p>Let's take a look at Spain's unemployment rate (only because it was the highest) across time.</p>
 <div class="codehilite"><pre><span></span><span class="n">spain</span> <span class="o">=</span> <span class="n">unemployment</span><span class="p">[(</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;name_en&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Spain&#39;</span><span class="p">)</span> <span class="o">&amp;</span>
                      <span class="p">(</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;seasonality&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;sa&#39;</span><span class="p">)]</span>
@@ -1628,7 +1370,7 @@ KeyError: &#39;year_month&#39;
 
 <h3 id="challenge-12-plot-without-missing-values">Challenge 12: Plot without missing values<a class="headerlink" href="#challenge-12-plot-without-missing-values" title="Permanent link">&para;</a></h3>
 <p>Note that there are some dates for which we lack data on Spain's unemployment rate. What could you do if you wanted your plot to show only dates where both Spain and Portugal have a defined unemployment rate?</p>
-<div class="codehilite"><pre><span></span><span class="c1">#### </span>
+<div class="codehilite"><pre><span></span>
 </pre></div>
                 
                   
