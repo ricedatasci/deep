@@ -373,15 +373,15 @@
       
         <li class="md-nav__item">
   <a href="#1-the-dataframe-importing-data-and-summary-statistics" class="md-nav__link">
-    1. The DataFrame: Importing Data and Summary Statistics 
+    1. The DataFrame: Importing Data and Summary Statistics
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#challenge-1-import-data-from-a-url" class="md-nav__link">
-    Challenge 1: Import Data From A URL
+  <a href="#import-data-from-a-url" class="md-nav__link">
+    Import Data From A URL
   </a>
   
 </li>
@@ -690,15 +690,15 @@
       
         <li class="md-nav__item">
   <a href="#1-the-dataframe-importing-data-and-summary-statistics" class="md-nav__link">
-    1. The DataFrame: Importing Data and Summary Statistics 
+    1. The DataFrame: Importing Data and Summary Statistics
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#challenge-1-import-data-from-a-url" class="md-nav__link">
-    Challenge 1: Import Data From A URL
+  <a href="#import-data-from-a-url" class="md-nav__link">
+    Import Data From A URL
   </a>
   
 </li>
@@ -909,8 +909,7 @@
                   <a href="https://github.com/ricedatasci/deep/edit/master/docs/curriculum/examples/introduction-to-pandas.ipynb" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="pandas"><code>pandas</code><a class="headerlink" href="#pandas" title="Permanent link">&para;</a></h1>
-<p>This workshop's goal&mdash;which is facilitated by this Jupyter notebook&mdash;is to give attendees the confidence to use <code>pandas</code> in their research projects. Basic familiarity with Python <em>is</em> assumed.</p>
+                <h1 id="pandas"><code>pandas</code> <a href="https://mybinder.org/v2/gh/dlab-berkeley/introduction-to-pandas/master?filepath=introduction-to-pandas.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a><a class="headerlink" href="#pandas" title="Permanent link">&para;</a></h1>
 <p><code>pandas</code> is designed to make it easier to work with structured data. Most of the analyses you might perform will likely involve using tabular data, e.g., from .csv files or relational databases (e.g., SQL). The <code>DataFrame</code> object in <code>pandas</code> is "a two-dimensional tabular, column-oriented data structure with both row and column labels."</p>
 <p>If you're curious:</p>
 <blockquote>
@@ -928,9 +927,7 @@
 <p>8 - <a href="#section8">Handling Missing Values (Boolean Indexing)</a><br></p>
 <p>9 - <a href="#section9">Sorting Values</a><br></p>
 <p>10 - <a href="#section10">Plotting In Pandas</a><br></p>
-<h2 id="1-the-dataframe-importing-data-and-summary-statistics">1. The DataFrame: Importing Data and Summary Statistics <a id="section1"/><a class="headerlink" href="#1-the-dataframe-importing-data-and-summary-statistics" title="Permanent link">&para;</a></h2>
-<p>The data used in these examples is available in the following <a href="https://github.com/dlab-berkeley/introduction-to-pandas">GitHub repository</a>. If you've <a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone">cloned that repo</a>, which is the recommended approach, you'll have everything you need to run this notebook. Otherwise, you can download the data file(s) from the above link. (Note: this notebook assumes that the data files are in a directory named <code>data/</code> found within your current working directory.)</p>
-<p>For this example, we're working with European unemployment data from Eurostat, which is hosted by <a href="https://code.google.com/p/dspl/downloads/list">Google</a>. There are several .csv files that we'll work with in this workshop.</p>
+<h2 id="1-the-dataframe-importing-data-and-summary-statistics">1. The DataFrame: Importing Data and Summary Statistics<a class="headerlink" href="#1-the-dataframe-importing-data-and-summary-statistics" title="Permanent link">&para;</a></h2>
 <p>Let's begin by importing <code>pandas</code> using the conventional abbreviation.</p>
 <div class="codehilite"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 
@@ -1123,7 +1120,7 @@
 
 <p>You may have noticed that the "count" is lower for the unemployment rate. This is because the summary statistics are based on <em>non-missing</em> values and count reflects that.</p>
 <p>The values depend on what it's called on. If the <code>DataFrame</code> includes both numeric and object (e.g., strings) <code>dtype</code>s, it will default to summarizing the numeric data. If <code>.describe()</code> is called on strings, for example, it will return the count, number of unique values, and the most frequent value along with its count.</p>
-<h3 id="challenge-1-import-data-from-a-url">Challenge 1: Import Data From A URL<a class="headerlink" href="#challenge-1-import-data-from-a-url" title="Permanent link">&para;</a></h3>
+<h3 id="import-data-from-a-url">Import Data From A URL<a class="headerlink" href="#import-data-from-a-url" title="Permanent link">&para;</a></h3>
 <p>Above, we imported the unemployment data using the <code>read_csv</code> function and a relative file path. <code>read_csv</code> is <a href="https://pandas.pydata.org/pandas-docs/version/0.23/generated/pandas.read_csv.html">a very flexible method</a>; it also allows us to import data using a URL as the file path. </p>
 <p>A csv file with data on world countries and their abbreviations is located at <a href="https://raw.githubusercontent.com/dlab-berkeley/introduction-to-pandas/master/data/countries.csv">https://raw.githubusercontent.com/dlab-berkeley/introduction-to-pandas/master/data/countries.csv</a> (saved as a string variable <code>countries_url</code> below).</p>
 <p>Using <code>read_csv</code>, import the country data and save it to the variable <code>countries</code>.</p>
@@ -1149,7 +1146,7 @@
 <p><strong>YOUR ANSWER HERE</strong></p>
 <h2 id="2-rename-index-and-slice">2. Rename, Index, and Slice <a id="section2"/><a class="headerlink" href="#2-rename-index-and-slice" title="Permanent link">&para;</a></h2>
 <p>Back to the entire unemployment data set. You may have noticed that the <code>month</code> column also includes the year. Let's go ahead and rename it.</p>
-<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;month&#39;</span> <span class="p">:</span> <span class="s1">&#39;year_month&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span> <span class="o">=</span> <span class="n">unemployment</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;month&#39;</span> <span class="p">:</span> <span class="s1">&#39;year_month&#39;</span><span class="p">})</span>
 </pre></div>
 
 <p>The <code>.rename()</code> method allows you to modify index labels and/or column names. As you can see, we passed a <code>dict</code> to the <code>columns</code> parameter, with the original name as the key and the new name as the value. Importantly, we also set the <code>inplace</code> parameter to <code>True</code>, which modifies the <em>actual</em> <code>DataFrame</code>, not a copy of it.</p>
@@ -1187,7 +1184,7 @@ During handling of the above exception, another exception occurred:
 
 KeyError                                  Traceback (most recent call last)
 
-&lt;ipython-input-23-de3f458c6671&gt; in &lt;module&gt;
+&lt;ipython-input-26-de3f458c6671&gt; in &lt;module&gt;
 ----&gt; 1 unemployment[&#39;year_month&#39;].head()
 
 
@@ -1550,6 +1547,43 @@ KeyError: &#39;year_month&#39;
 <div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;name_en&#39;</span><span class="p">,</span> <span class="s1">&#39;year_month&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">unemployment</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
+
+<div class="codehilite"><pre><span></span>---------------------------------------------------------------------------
+
+KeyError                                  Traceback (most recent call last)
+
+&lt;ipython-input-24-2105d3d4b287&gt; in &lt;module&gt;
+----&gt; 1 unemployment.sort_values([&#39;name_en&#39;, &#39;year_month&#39;], inplace=True)
+      2 unemployment.reset_index(drop=True, inplace=True)
+
+
+~/.virtualenvs/deep/lib/python3.6/site-packages/pandas/core/frame.py in sort_values(self, by, axis, ascending, inplace, kind, na_position)
+   4984             from pandas.core.sorting import lexsort_indexer
+   4985 
+-&gt; 4986             keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+   4987             indexer = lexsort_indexer(keys, orders=ascending, na_position=na_position)
+   4988             indexer = ensure_platform_int(indexer)
+
+
+~/.virtualenvs/deep/lib/python3.6/site-packages/pandas/core/frame.py in &lt;listcomp&gt;(.0)
+   4984             from pandas.core.sorting import lexsort_indexer
+   4985 
+-&gt; 4986             keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+   4987             indexer = lexsort_indexer(keys, orders=ascending, na_position=na_position)
+   4988             indexer = ensure_platform_int(indexer)
+
+
+~/.virtualenvs/deep/lib/python3.6/site-packages/pandas/core/generic.py in _get_label_or_level_values(self, key, axis)
+   1772             values = self.axes[axis].get_level_values(key)._values
+   1773         else:
+-&gt; 1774             raise KeyError(key)
+   1775 
+   1776         # Check for duplicates
+
+
+KeyError: &#39;year_month&#39;
+</pre></div>
+
 
 <p>Let's take a look at Spain's unemployment rate (only because it was the highest) across time.</p>
 <div class="codehilite"><pre><span></span><span class="n">spain</span> <span class="o">=</span> <span class="n">unemployment</span><span class="p">[(</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;name_en&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Spain&#39;</span><span class="p">)</span> <span class="o">&amp;</span>
