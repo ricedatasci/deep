@@ -1,0 +1,1669 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Pandas - DEEP (Data Education and Exploration Project)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#pandas" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="DEEP (Data Education and Exploration Project)" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">cloud</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              DEEP (Data Education and Exploration Project)
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Pandas
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/ricedatasci/deep/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    ricedatasci/deep
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="DEEP (Data Education and Exploration Project)" class="md-nav__button md-logo">
+      
+        <i class="md-icon">cloud</i>
+      
+    </a>
+    DEEP (Data Education and Exploration Project)
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/ricedatasci/deep/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    ricedatasci/deep
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Curriculum
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Curriculum
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/exercise/" title="Exercise" class="md-nav__link">
+      Exercise
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/exercise/" title="Exercise" class="md-nav__link">
+      Exercise
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Pandas
+      </label>
+    
+    <a href="./" title="Pandas" class="md-nav__link md-nav__link--active">
+      Pandas
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-dataframe-importing-data-and-summary-statistics" class="md-nav__link">
+    1. The DataFrame: Importing Data and Summary Statistics 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-1-import-data-from-a-url" class="md-nav__link">
+    Challenge 1: Import Data From A URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-2-the-tail-method" class="md-nav__link">
+    Challenge 2: The tail method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-3-describe-countries" class="md-nav__link">
+    Challenge 3: Describe countries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-rename-index-and-slice" class="md-nav__link">
+    2. Rename, Index, and Slice 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-4-renaming-bacteria" class="md-nav__link">
+    Challenge 4: Renaming bacteria
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-5-indexing-to-get-a-specific-value" class="md-nav__link">
+    Challenge 5: Indexing to get a specific value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-6-indexing-multiple-rows-and-columns" class="md-nav__link">
+    Challenge 6: Indexing multiple rows and columns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-manipulating-columns-renaming-creating-reordering" class="md-nav__link">
+    3. Manipulating Columns: Renaming, Creating, Reordering
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-7-another-way-to-get-the-month" class="md-nav__link">
+    Challenge 7: Another way to get the month
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-merging" class="md-nav__link">
+    4. Merging
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-8" class="md-nav__link">
+    Challenge 8:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-calculating-unique-and-missing-values" class="md-nav__link">
+    5. Calculating Unique and Missing Values
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-9-exploring-unemployment-rates" class="md-nav__link">
+    Challenge 9: Exploring unemployment rates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-groupby" class="md-nav__link">
+    6. GroupBy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-10-groupby" class="md-nav__link">
+    Challenge 10: GroupBy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-exporting-a-dataframe-to-csv" class="md-nav__link">
+    7. Exporting A DataFrame to csv 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-dealing-with-missing-values-boolean-indexing" class="md-nav__link">
+    8. Dealing With Missing Values: Boolean Indexing 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-11-boolean-indexing" class="md-nav__link">
+    Challenge 11: Boolean Indexing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-sorting-values" class="md-nav__link">
+    9. Sorting Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-plotting-with-pandas" class="md-nav__link">
+    10. Plotting With Pandas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-12-plot-without-missing-values" class="md-nav__link">
+    Challenge 12: Plot without missing values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Examples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dataset/" title="Dataset" class="md-nav__link">
+      Dataset
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../contributors/" title="Contributors" class="md-nav__link">
+      Contributors
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../resources/" title="Resources" class="md-nav__link">
+      Resources
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-dataframe-importing-data-and-summary-statistics" class="md-nav__link">
+    1. The DataFrame: Importing Data and Summary Statistics 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-1-import-data-from-a-url" class="md-nav__link">
+    Challenge 1: Import Data From A URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-2-the-tail-method" class="md-nav__link">
+    Challenge 2: The tail method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-3-describe-countries" class="md-nav__link">
+    Challenge 3: Describe countries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-rename-index-and-slice" class="md-nav__link">
+    2. Rename, Index, and Slice 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-4-renaming-bacteria" class="md-nav__link">
+    Challenge 4: Renaming bacteria
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-5-indexing-to-get-a-specific-value" class="md-nav__link">
+    Challenge 5: Indexing to get a specific value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-6-indexing-multiple-rows-and-columns" class="md-nav__link">
+    Challenge 6: Indexing multiple rows and columns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-manipulating-columns-renaming-creating-reordering" class="md-nav__link">
+    3. Manipulating Columns: Renaming, Creating, Reordering
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-7-another-way-to-get-the-month" class="md-nav__link">
+    Challenge 7: Another way to get the month
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-merging" class="md-nav__link">
+    4. Merging
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-8" class="md-nav__link">
+    Challenge 8:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-calculating-unique-and-missing-values" class="md-nav__link">
+    5. Calculating Unique and Missing Values
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-9-exploring-unemployment-rates" class="md-nav__link">
+    Challenge 9: Exploring unemployment rates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-groupby" class="md-nav__link">
+    6. GroupBy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-10-groupby" class="md-nav__link">
+    Challenge 10: GroupBy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-exporting-a-dataframe-to-csv" class="md-nav__link">
+    7. Exporting A DataFrame to csv 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-dealing-with-missing-values-boolean-indexing" class="md-nav__link">
+    8. Dealing With Missing Values: Boolean Indexing 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-11-boolean-indexing" class="md-nav__link">
+    Challenge 11: Boolean Indexing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-sorting-values" class="md-nav__link">
+    9. Sorting Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-plotting-with-pandas" class="md-nav__link">
+    10. Plotting With Pandas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-12-plot-without-missing-values" class="md-nav__link">
+    Challenge 12: Plot without missing values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ricedatasci/deep/edit/master/docs/curriculum/examples/introduction-to-pandas.ipynb" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="pandas"><code>pandas</code><a class="headerlink" href="#pandas" title="Permanent link">&para;</a></h1>
+<p>This workshop's goal&mdash;which is facilitated by this Jupyter notebook&mdash;is to give attendees the confidence to use <code>pandas</code> in their research projects. Basic familiarity with Python <em>is</em> assumed.</p>
+<p><code>pandas</code> is designed to make it easier to work with structured data. Most of the analyses you might perform will likely involve using tabular data, e.g., from .csv files or relational databases (e.g., SQL). The <code>DataFrame</code> object in <code>pandas</code> is "a two-dimensional tabular, column-oriented data structure with both row and column labels."</p>
+<p>If you're curious:</p>
+<blockquote>
+<p>The <code>pandas</code> name itself is derived from <em>panel data</em>, an econometrics term for multidimensional structured data sets, and <em>Python data analysis</em> itself. After getting introduced, you can consult the full <a href="http://pandas.pydata.org/pandas-docs/stable/"><code>pandas</code> documentation</a>.</p>
+</blockquote>
+<p>To motivate this workshop, we'll work with example data and go through the various steps you might need to prepare data for analysis. You'll (hopefully) realize that doing this type of work is much more difficult using Python's built-in data structures.</p>
+<h3 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h3>
+<p>1 - <a href="#section1">The DataFrame</a><br></p>
+<p>2 - <a href="#section2">Rename, Index, and Slice</a><br></p>
+<p>3 - <a href="#section3">Manipulating Columns</a><br></p>
+<p>4 - <a href="#section4">Merging</a><br></p>
+<p>5 - <a href="#section5">Calculating Unique And Missing Values</a><br></p>
+<p>6 - <a href="#section6">Groupby</a><br></p>
+<p>7- <a href="#section7">Exporting To CSV</a><br></p>
+<p>8 - <a href="#section8">Handling Missing Values (Boolean Indexing)</a><br></p>
+<p>9 - <a href="#section9">Sorting Values</a><br></p>
+<p>10 - <a href="#section10">Plotting In Pandas</a><br></p>
+<h2 id="1-the-dataframe-importing-data-and-summary-statistics">1. The DataFrame: Importing Data and Summary Statistics <a id="section1"/><a class="headerlink" href="#1-the-dataframe-importing-data-and-summary-statistics" title="Permanent link">&para;</a></h2>
+<p>The data used in these examples is available in the following <a href="https://github.com/dlab-berkeley/introduction-to-pandas">GitHub repository</a>. If you've <a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone">cloned that repo</a>, which is the recommended approach, you'll have everything you need to run this notebook. Otherwise, you can download the data file(s) from the above link. (Note: this notebook assumes that the data files are in a directory named <code>data/</code> found within your current working directory.)</p>
+<p>For this example, we're working with European unemployment data from Eurostat, which is hosted by <a href="https://code.google.com/p/dspl/downloads/list">Google</a>. There are several .csv files that we'll work with in this workshop.</p>
+<p>Let's begin by importing <code>pandas</code> using the conventional abbreviation.</p>
+<div class="codehilite"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="kn">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;savefig&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;xtick.minor.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;ytick.minor.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+
+<p>The <code>read_csv()</code> function in <code>pandas</code> allows us to easily import our data. By default, it assumes the data is comma-delimited. However, you can specify the delimiter used in your data (e.g., tab, semicolon, pipe, etc.). There are several parameters that you can specify. See the documentation <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html">here</a>. <code>read_csv()</code> returns a <code>DataFrame</code>.</p>
+<p>Notice that we call <code>read_csv()</code> using the <code>pd</code> abbreviation from the import statement above.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/dlab-berkeley/introduction-to-pandas/master/data/countries.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+<p>Great! You've created a <code>pandas</code> <code>DataFrame</code>. We can look at our data by using the <code>.head()</code> method. By default, this shows the header (column names) and the first five rows. Passing an integer, <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, to <code>.head()</code> returns that number of rows. To see the last <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> rows, use <code>.tail()</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>google_country_code</th>
+      <th>country_group</th>
+      <th>name_en</th>
+      <th>name_fr</th>
+      <th>name_de</th>
+      <th>latitude</th>
+      <th>longitude</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>at</td>
+      <td>AT</td>
+      <td>eu</td>
+      <td>Austria</td>
+      <td>Autriche</td>
+      <td>Österreich</td>
+      <td>47.696554</td>
+      <td>13.345980</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>be</td>
+      <td>BE</td>
+      <td>eu</td>
+      <td>Belgium</td>
+      <td>Belgique</td>
+      <td>Belgien</td>
+      <td>50.501045</td>
+      <td>4.476674</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>bg</td>
+      <td>BG</td>
+      <td>eu</td>
+      <td>Bulgaria</td>
+      <td>Bulgarie</td>
+      <td>Bulgarien</td>
+      <td>42.725674</td>
+      <td>25.482322</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>hr</td>
+      <td>HR</td>
+      <td>non-eu</td>
+      <td>Croatia</td>
+      <td>Croatie</td>
+      <td>Kroatien</td>
+      <td>44.746643</td>
+      <td>15.340844</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>cy</td>
+      <td>CY</td>
+      <td>eu</td>
+      <td>Cyprus</td>
+      <td>Chypre</td>
+      <td>Zypern</td>
+      <td>35.129141</td>
+      <td>33.428682</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>To find the number of rows, you can use the <code>len()</code> function. Alternatively, you can use the <code>shape</code> attribute.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>(30, 8)
+</pre></div>
+
+
+<p>There are 20,796 rows and 5 columns.</p>
+<p>A useful method that generates various summary statistics is <code>.describe()</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>latitude</th>
+      <th>longitude</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>count</td>
+      <td>30.000000</td>
+      <td>30.000000</td>
+    </tr>
+    <tr>
+      <td>mean</td>
+      <td>49.092609</td>
+      <td>14.324579</td>
+    </tr>
+    <tr>
+      <td>std</td>
+      <td>7.956624</td>
+      <td>11.257010</td>
+    </tr>
+    <tr>
+      <td>min</td>
+      <td>35.129141</td>
+      <td>-8.239122</td>
+    </tr>
+    <tr>
+      <td>25%</td>
+      <td>43.230916</td>
+      <td>6.979186</td>
+    </tr>
+    <tr>
+      <td>50%</td>
+      <td>49.238087</td>
+      <td>14.941462</td>
+    </tr>
+    <tr>
+      <td>75%</td>
+      <td>54.090400</td>
+      <td>23.351690</td>
+    </tr>
+    <tr>
+      <td>max</td>
+      <td>64.950159</td>
+      <td>35.439795</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>You may have noticed that the "count" is lower for the unemployment rate. This is because the summary statistics are based on <em>non-missing</em> values and count reflects that.</p>
+<p>The values depend on what it's called on. If the <code>DataFrame</code> includes both numeric and object (e.g., strings) <code>dtype</code>s, it will default to summarizing the numeric data. If <code>.describe()</code> is called on strings, for example, it will return the count, number of unique values, and the most frequent value along with its count.</p>
+<h3 id="challenge-1-import-data-from-a-url">Challenge 1: Import Data From A URL<a class="headerlink" href="#challenge-1-import-data-from-a-url" title="Permanent link">&para;</a></h3>
+<p>Above, we imported the unemployment data using the <code>read_csv</code> function and a relative file path. <code>read_csv</code> is <a href="https://pandas.pydata.org/pandas-docs/version/0.23/generated/pandas.read_csv.html">a very flexible method</a>; it also allows us to import data using a URL as the file path. </p>
+<p>A csv file with data on world countries and their abbreviations is located at <a href="https://raw.githubusercontent.com/dlab-berkeley/introduction-to-pandas/master/data/countries.csv">https://raw.githubusercontent.com/dlab-berkeley/introduction-to-pandas/master/data/countries.csv</a> (saved as a string variable <code>countries_url</code> below).</p>
+<p>Using <code>read_csv</code>, import the country data and save it to the variable <code>countries</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">countries_url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/dlab-berkeley/introduction-to-pandas/master/data/countries.csv&#39;</span>
+</pre></div>
+
+<h3 id="challenge-2-the-tail-method">Challenge 2: The <code>tail</code> method<a class="headerlink" href="#challenge-2-the-tail-method" title="Permanent link">&para;</a></h3>
+<p>DataFrames all have a method called <code>tail</code> that takes an integer as an argument and returns a new DataFrame. Before using <code>tail</code>, can you guess at what it does? Try using <code>tail</code>; was your guess correct?</p>
+<div class="codehilite"><pre><span></span><span class="c1"># use the tail method on either the unemployment or countries dataframe</span>
+</pre></div>
+
+<h3 id="challenge-3-describe-countries">Challenge 3: Describe <code>countries</code><a class="headerlink" href="#challenge-3-describe-countries" title="Permanent link">&para;</a></h3>
+<p>It's important to understand a few fundamentals about your data before you start work with it, including what information it contains, how large it is, and how the values are generally distributed.</p>
+<p>Using the methods and attributes above, answer the following questions about <code>countries</code>:
+* what columns does it contain?
+* what does each row stand for?
+* how many rows and columns does it contain?
+* are there any missing values in the latitude or longitude columns? </p>
+<p>Hint: the <code>head</code> and <code>describe</code> functions, as well as the <code>shape</code> attribute, will be helpful here.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># explore the countries data</span>
+</pre></div>
+
+<p><strong>YOUR ANSWER HERE</strong></p>
+<h2 id="2-rename-index-and-slice">2. Rename, Index, and Slice <a id="section2"/><a class="headerlink" href="#2-rename-index-and-slice" title="Permanent link">&para;</a></h2>
+<p>Back to the entire unemployment data set. You may have noticed that the <code>month</code> column also includes the year. Let's go ahead and rename it.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;month&#39;</span> <span class="p">:</span> <span class="s1">&#39;year_month&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+<p>The <code>.rename()</code> method allows you to modify index labels and/or column names. As you can see, we passed a <code>dict</code> to the <code>columns</code> parameter, with the original name as the key and the new name as the value. Importantly, we also set the <code>inplace</code> parameter to <code>True</code>, which modifies the <em>actual</em> <code>DataFrame</code>, not a copy of it.</p>
+<p>It might also make sense to separate the data in <code>year_month</code> into two separate columns. To do this, you'll need to know how to select a single column. We can either use bracket (<code>[]</code>) or dot notation (referred to as <em>attribute access</em>).</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;year_month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>---------------------------------------------------------------------------
+
+KeyError                                  Traceback (most recent call last)
+
+~/.virtualenvs/deep/lib/python3.6/site-packages/pandas/core/indexes/base.py in get_loc(self, key, method, tolerance)
+   2896             try:
+-&gt; 2897                 return self._engine.get_loc(key)
+   2898             except KeyError:
+
+
+pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
+
+
+pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
+
+
+pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
+
+
+pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
+
+
+KeyError: &#39;year_month&#39;
+
+
+During handling of the above exception, another exception occurred:
+
+
+KeyError                                  Traceback (most recent call last)
+
+&lt;ipython-input-23-de3f458c6671&gt; in &lt;module&gt;
+----&gt; 1 unemployment[&#39;year_month&#39;].head()
+
+
+~/.virtualenvs/deep/lib/python3.6/site-packages/pandas/core/frame.py in __getitem__(self, key)
+   2978             if self.columns.nlevels &gt; 1:
+   2979                 return self._getitem_multilevel(key)
+-&gt; 2980             indexer = self.columns.get_loc(key)
+   2981             if is_integer(indexer):
+   2982                 indexer = [indexer]
+
+
+~/.virtualenvs/deep/lib/python3.6/site-packages/pandas/core/indexes/base.py in get_loc(self, key, method, tolerance)
+   2897                 return self._engine.get_loc(key)
+   2898             except KeyError:
+-&gt; 2899                 return self._engine.get_loc(self._maybe_cast_indexer(key))
+   2900         indexer = self.get_indexer([key], method=method, tolerance=tolerance)
+   2901         if indexer.ndim &gt; 1 or indexer.size &gt; 1:
+
+
+pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
+
+
+pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
+
+
+pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
+
+
+pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
+
+
+KeyError: &#39;year_month&#39;
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">year_month</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+<p>It is preferrable to use the bracket notation as a column name might inadvertently have the same name as a <code>DataFrame</code> (or <code>Series</code>) method. In addition, only bracket notation can be used to create a new column. If you try and use attribute access to create a new column, you'll create a new attribute, <em>not</em> a new column.</p>
+<p>When selecting a single column, we have a <code>pandas</code> <code>Series</code> object, which is a single vector of data (e.g., a NumPy array) with "an associated array of data labels, called its <em>index</em>." A <code>DataFrame</code> also has an index. In our example, the indices are an array of sequential integers, which is the default. You can find them in the left-most position, without a column label.</p>
+<p>Indices need not be a sequence of integers. They can, for example, be dates or strings. Note that indices do <em>not</em> need to be unique.</p>
+<p>Indices, like column names, can be used to select data. Indices can be used to select particular rows. In fact, you can do something like <code>.head()</code> with slicing using the <code>[]</code> operator.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+<p>Before we continue, let's look at a few useful ways to index data&mdash;that is, select rows.</p>
+<p><code>.loc</code> primarily works with string labels. It accepts a single label, a list (or array) of labels, or a slice of labels (e.g., <code>'a' : 'f'</code>).</p>
+<p>Let's create a <code>DataFrame</code> to see how this works. (This is based on an <a href="https://github.com/fonnesbeck/scipy2015_tutorial/blob/master/notebooks/1.%20Data%20Preparation.ipynb">example</a> from Chris Fonnesbeck's <a href="https://github.com/fonnesbeck/scipy2015_tutorial">Computational Statistics II Tutorial</a>.)</p>
+<div class="codehilite"><pre><span></span><span class="n">bacteria</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;bacteria_counts&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">632</span><span class="p">,</span> <span class="mi">1638</span><span class="p">,</span> <span class="mi">569</span><span class="p">,</span> <span class="mi">115</span><span class="p">],</span>
+                         <span class="s1">&#39;other_feature&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">438</span><span class="p">,</span> <span class="mi">833</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">298</span><span class="p">]},</span>
+                         <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Firmicutes&#39;</span><span class="p">,</span> <span class="s1">&#39;Proteobacteria&#39;</span><span class="p">,</span> <span class="s1">&#39;Actinobacteria&#39;</span><span class="p">,</span> <span class="s1">&#39;Bacteroidetes&#39;</span><span class="p">])</span>
+</pre></div>
+
+<p>Notice that we pass in a <code>dict</code>, where the keys correspond to column names and the values to the data. In this example, we've also set the indices&mdash;strings in this case&mdash;to be the taxon of each bacterium.</p>
+<div class="codehilite"><pre><span></span><span class="n">bacteria</span>
+</pre></div>
+
+<p>Now, if we're interested in the values (row) associated with "Actinobacteria," we can use <code>.loc</code> and the index name.</p>
+<div class="codehilite"><pre><span></span><span class="n">bacteria</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Actinobacteria&#39;</span><span class="p">]</span>
+</pre></div>
+
+<p>This returns the column values for the specified row. Interestingly, we could have also used "positional indexing," even though the indices are strings.</p>
+<div class="codehilite"><pre><span></span><span class="n">bacteria</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+<p>The difference is that the former returns a <code>Series</code> because we selected a single lable, while the latter returns a <code>DataFrame</code> because we selected a range of positions.</p>
+<p>Let's return to our unemployment data. Another indexing option, <code>.iloc</code>, primarily works with integer positions. To select specific rows, we can do the following.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
+</pre></div>
+
+<p>We can select a range of rows and specify the step value.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+<p>(Note: As is typical in Python, the end position is not included. Therefore, we don't see the row associated with the index 50.)</p>
+<p>Indexing is important. You'll use it a lot. Below, we'll show how to index based on data values.</p>
+<h3 id="challenge-4-renaming-bacteria">Challenge 4: Renaming <code>bacteria</code><a class="headerlink" href="#challenge-4-renaming-bacteria" title="Permanent link">&para;</a></h3>
+<p>The "other_feature" column in our <code>bacteria</code> table isn't very descriptive. Suppose we know that "other_feature" refers to a second set of bacteria count observations. Use the <code>rename</code> method to give "other_feature" a more descriptive name.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># rename &quot;other_feature&quot; in bacteria</span>
+</pre></div>
+
+<h3 id="challenge-5-indexing-to-get-a-specific-value">Challenge 5: Indexing to get a specific value<a class="headerlink" href="#challenge-5-indexing-to-get-a-specific-value" title="Permanent link">&para;</a></h3>
+<p>Both <code>loc</code> and <code>iloc</code> can be used to select a particular value if they are given two arguments. The first argument is the name (when using <code>loc</code>) or index number (when using <code>iloc</code>) of the <em>row</em> you want, while the second argument is the name or index number of the <em>column</em> you want.</p>
+<p>Using <code>loc</code>, select "Bacteroidetes" and "bacteria_counts" to get the count of Bacteroidetes.</p>
+<p>BONUS: how could you do the same task using <code>iloc</code>?</p>
+<div class="codehilite"><pre><span></span>
+</pre></div>
+
+<h3 id="challenge-6-indexing-multiple-rows-and-columns">Challenge 6: Indexing multiple rows and columns<a class="headerlink" href="#challenge-6-indexing-multiple-rows-and-columns" title="Permanent link">&para;</a></h3>
+<p>Both <code>loc</code> and <code>iloc</code> can be used to select subsets of columns <em>and</em> rows at the same time if they are given lists (and/or slices, for <code>iloc</code>] as their two arguments. </p>
+<p>Using <code>iloc</code> on the <code>unemployment</code> DataFrame, get:
+* every row starting at row 4 and ending at row 7
+* the 0<sup>th</sup>, 2<sup>nd</sup>, and 3<sup>rd</sup> columns</p>
+<p>BONUS: how could you do the same task using <code>loc</code>?</p>
+<div class="codehilite"><pre><span></span>
+</pre></div>
+
+<h2 id="3-manipulating-columns-renaming-creating-reordering">3. Manipulating Columns: Renaming, Creating, Reordering<a class="headerlink" href="#3-manipulating-columns-renaming-creating-reordering" title="Permanent link">&para;</a></h2>
+<p>So, we still want to <strong>split <code>year_month</code> into two separate columns.</strong> Above, we saw that this column is type (technically, <code>dtype</code>) <code>float64</code>. We'll first extract the year using the <code>.astype()</code> method. This allows for type casting&mdash;basically converting from one type to another. We'll then subtract this value from <code>year_month</code>&mdash;to get the decimal portion of the value&mdash;and multiply the result by 100 and convert to <code>int</code>.</p>
+<p>For more information on <code>pandas</code> <code>dtype</code>s, check the documentation <a href="http://pandas.pydata.org/pandas-docs/stable/basics.html#dtypes">here</a>.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;year_month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+
+<p>In this case, we're casting the floating point values to integers. In Python, this <a href="https://docs.python.org/2/library/stdtypes.html#numeric-types-int-float-long-complex">truncates the decimals</a>.</p>
+<p>Finally, let's create our <strong>month</strong> variable as described above. (Because of the truncating that occurs when casting to <code>int</code>, we first round the values to the nearest whole number.)</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;year_month&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+
+<p>To create the <code>month</code> column, we subtracted two vectors. This resulted in the decimal value in <code>year_month</code>. To transform the values to integers, we multiplied by 100.</p>
+<p>Now, let's say we wanted to <strong>reorder the columns</strong> in the <code>DataFrame</code>. For this, we use bracket notation again, passing in a list of column names in the order we'd like to see them.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span> <span class="o">=</span> <span class="n">unemployment</span><span class="p">[[</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;seasonality&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;year_month&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;unemployment&#39;</span><span class="p">,</span> <span class="s1">&#39;unemployment_rate&#39;</span><span class="p">]]</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+<h3 id="challenge-7-another-way-to-get-the-month">Challenge 7: Another way to get the month<a class="headerlink" href="#challenge-7-another-way-to-get-the-month" title="Permanent link">&para;</a></h3>
+<p>If you didn't know that casting floats to ints truncates the decimals in Python, you could have used NumPy's <code>floor()</code> function. <code>np.floor</code> takes an array or Pandas Series of floats as its argument, and returns an array or Series where every float has been rounded down to the nearest whole number. </p>
+<p>Use <code>np.floor</code> to round the values in the "year_month" column down so we can cast them as integer years. Note that the types are still floats, so we'll still need to use <code>astype</code> to typecast.</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="c1"># select the &quot;year_month&quot; column</span>
+<span class="n">year_month</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># use np.floor on year_month to get the years as floats</span>
+<span class="n">years_by_floor</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># cast years_by_floor to integers using astype(int)</span>
+<span class="n">int_years</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># check that this gets the same answers as our first approach</span>
+<span class="c1"># this should return True</span>
+<span class="p">(</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;year_month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">==</span> <span class="n">int_years</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</pre></div>
+
+<p>The last line of code in the previous cell does an element-wise comparison of the values in the corresponding arrays. The <code>.all()</code> method checks whether <em>all</em> elements are <code>True</code>.</p>
+<h2 id="4-merging">4. Merging<a class="headerlink" href="#4-merging" title="Permanent link">&para;</a></h2>
+<p>So far, our <code>DataFrame</code> is organized in a reasonable way. But, we know we can do better. We're eventually going to be interested in the unemployment rate for each country. The trouble is, we don't exactly know what the values in <code>country</code> refer to. We can fix that by getting country names. These can be found in <code>countries.csv</code>. Run the following cell to import the countries data using a URL as the file path.</p>
+<div class="codehilite"><pre><span></span><span class="n">countries_url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/dlab-berkeley/introduction-to-pandas/master/data/countries.csv&#39;</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">countries_url</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">countries</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+<p>This file has lots of useful information. It even has the country names is three different languages.</p>
+<p>Because the data we need is stored in two separate files, we'll want to merge the data somehow. Let's determine which column we can use to join this data. <code>country</code> looks like a good option. However, we don't need all of the columns in the <code>countries</code> <code>DataFrame</code>. To select certain columns, we use the name bracket notation we used to reorder the columns.</p>
+<div class="codehilite"><pre><span></span><span class="n">country_names</span> <span class="o">=</span> <span class="n">countries</span><span class="p">[[</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;country_group&#39;</span><span class="p">,</span> <span class="s1">&#39;name_en&#39;</span><span class="p">]]</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">country_names</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+<p><code>pandas</code> includes an easy-to-use merge function. Let's use it to <strong>merge the two <code>DataFrame</code>s on country code.</strong></p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">unemployment</span><span class="p">,</span> <span class="n">country_names</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
+</pre></div>
+
+<p>Merging is often more complex than this example. If you want to merge on multiple columns, you can pass a list of column names to the <code>on</code> parameter.</p>
+<div class="codehilite"><pre><span></span>pd.merge(first, second, on=[&#39;name&#39;, &#39;id&#39;])
+</pre></div>
+
+<p>For more information on merging, check the <a href="http://pandas.pydata.org/pandas-docs/stable/merging.html#database-style-dataframe-joining-merging">documentation</a>.</p>
+<p><code>pandas</code> also provides a <code>.merge()</code> method that can act on a <code>DataFrame</code>. You can read more about that <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.merge.html">here</a>.</p>
+<h3 id="challenge-8">Challenge 8:<a class="headerlink" href="#challenge-8" title="Permanent link">&para;</a></h3>
+<p>You may sometimes need to merge on columns with different names. To do so, use the <code>left_on</code> and <code>right_on</code> parameters, where the first listed <code>DataFrame</code> is the "left" one and the second is the "right." It might look something this.</p>
+<div class="codehilite"><pre><span></span>pd.merge(one, two, left_on=&#39;city&#39;, right_on=&#39;city_name&#39;)
+</pre></div>
+
+<p>Suppose wanted to merge <code>unemployment</code> with a new DataFrame called <code>country_codes</code>, where the abbreviation for each country is in the column "c_code":</p>
+<div class="codehilite"><pre><span></span><span class="n">country_codes</span> <span class="o">=</span> <span class="n">country_names</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;c_code&quot;</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;country_group&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">country_codes</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+<p>Use <code>merge</code> to merge <code>unemployment</code> and <code>country_codes</code> on their country codes. Make sure to specify <code>left_on=</code> and <code>right_on=</code> in the call to <code>merge</code>!</p>
+<div class="codehilite"><pre><span></span>
+</pre></div>
+
+<h2 id="5-calculating-unique-and-missing-values">5. Calculating Unique and Missing Values<a class="headerlink" href="#5-calculating-unique-and-missing-values" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+<p>That's better. We now know that the abbreviation "at" corresponds to Austria. We might be curious to check what countries we have data for. The <code>Series</code> object includes a <code>.unique()</code> method. We'll use this to check the countries. We can select the name either using bracket or dot notation. (While we suggested using brackets above, it <em>is</em> sometimes easier to use dot notation. Just be careful.)</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">name_en</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+<p>To get a count of the <strong>number of unique countries,</strong> we can either wrap the above code with <code>len()</code> to get the number of items in the array, or we can use the  <code>Series.nunique()</code> method.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">name_en</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+
+<p>It might be more interesting to know <strong>how many observations</strong> we actually have. <code>pandas</code> has a <code>Series</code> method called <code>.value_counts()</code> that returns the counts for the unique values in the <code>Series</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;name_en&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+<p>By default, the <code>Series</code> is sorted by values. If you'd like it sorted by index&mdash;country name in this case&mdash;append the <code>.sort_index()</code> method.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;name_en&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+</pre></div>
+
+<p>This will be useful for our analysis. The maximum number of observations for a given country for this time period is 1,008 observations. We'll note that certain countries, such as Turkey, have far less data.</p>
+<p>How about finding the <strong>date range</strong> for this data set? Let's look at the minimum and maximum years.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+
+<p>Next, we should pause for a moment and think about what data we really care about. For our purposes, the variable of interest is <code>unemployment_rate</code>. The number of observations by country only reflect the number of instances of each country name in the dataset. It is possible, maybe even expected, to have some missing data within those instances. Let's find out <strong>how many unemployment rate values are missing.</strong></p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;unemployment_rate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+<p>The <code>.isnull()</code> method returns a corresponding boolean value for each entry in the unemployment rate <code>Series</code>. In Python <code>True</code> is equivalent to 1 and <code>False</code> is equivalent to 0. Thus, when we add the result (with <code>.sum()</code>), we get a count for the <em>total</em> number of missing values.</p>
+<h3 id="challenge-9-exploring-unemployment-rates">Challenge 9: Exploring unemployment rates<a class="headerlink" href="#challenge-9-exploring-unemployment-rates" title="Permanent link">&para;</a></h3>
+<p>What are the minimum and maximum unemployment rates in our data set? Which unemployment rates are most and least common?</p>
+<p>Hint: look at where we found the minimum and maximum years for a hint to the first question, and use <code>value_counts</code> for the second.</p>
+<div class="codehilite"><pre><span></span>
+</pre></div>
+
+<h2 id="6-groupby">6. GroupBy<a class="headerlink" href="#6-groupby" title="Permanent link">&para;</a></h2>
+<p>What if we'd like to know how many missing values exist at the <em>country</em> level? We can take the main part of what we had above and create a new column in the <code>DataFrame</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;unemployment_rate_null&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;unemployment_rate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
+</pre></div>
+
+<p>To count the <strong>number of missing values for each country,</strong> we introduce the <code>.groupby()</code> method.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;name_en&#39;</span><span class="p">)[</span><span class="s1">&#39;unemployment_rate_null&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+<p>Let's explain what just happened. We start with our <code>DataFrame</code>. We tell <code>pandas</code> that we want to group the data by country name&mdash;that's what goes in the parentheses. Next, we need to tell it what column we'd like to perform the <code>.sum()</code> operation on. In this case, it's the indicator for whether or not the unemployment rate was missing.</p>
+<p>As we saw above, the number of records for each country differs. We might, then, want to have the <strong>missing values by country shown as percentages.</strong> Let's create a new <code>DataFrame</code> for this.</p>
+<p>We'll take the code from above and set the <code>as_index</code> parameter to <code>False</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment_rate</span> <span class="o">=</span> <span class="n">unemployment</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;name_en&#39;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="bp">False</span><span class="p">)[</span><span class="s1">&#39;unemployment_rate_null&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">unemployment_rate</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+<p><code>unemployment_rate</code> is a <code>DataFrame</code> with the information from cell 34, above. It's important to note that using <code>as_index=False</code> in <code>.groupby()</code> only works if the grouping column(s) are not the same as the columns on which we're performing the operation.</p>
+<p>Also, to group by several columns, simply pass in a list of column names to <code>.groupby()</code>.</p>
+<div class="codehilite"><pre><span></span>unemployment.groupby([&#39;name_en&#39;, &#39;seasonality&#39;])[&#39;unemployment_rate&#39;].mean()
+</pre></div>
+
+<p>Now, let's add the number of observations by country to the <code>DataFrame</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment_rate</span><span class="p">[</span><span class="s1">&#39;n_obs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unemployment</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;name_en&#39;</span><span class="p">)[</span><span class="s1">&#39;name_en&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+
+<p>Here, we need to use the <code>values</code> attribute to get an array of the counts. Excluding <code>values</code> will result in a column full of <code>NaN</code>s. This is because the index in <code>unemployment.groupby('name_en')['name_en'].count()</code> is a list of the country names. When creating a new column, <code>pandas</code> tries to match on index. Recall that the default index values for a <code>DataFrame</code> is a sequence of integers.</p>
+<p>Because we know (or have noticed) that the <code>.groupby()</code> function returns the values in alphabetical order, we can simply set the new column to the list of values, as we have done. You can, however, be more explicit and create another <code>DataFrame</code> and merge on country name.</p>
+<p>Finally, let's create the column for the percentage of missing values.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment_rate</span><span class="p">[</span><span class="s1">&#39;null_percentage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unemployment_rate</span><span class="p">[</span><span class="s1">&#39;unemployment_rate_null&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">unemployment_rate</span><span class="p">[</span><span class="s1">&#39;n_obs&#39;</span><span class="p">]</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">unemployment_rate</span>
+</pre></div>
+
+<p>This is the second time we've called a <code>DataFrame</code> without something like <code>.head()</code>. Let's describe what it does. By default, <code>pandas</code> prints 60 rows. In this case, because there are only 30 countries, we see the entire <code>DataFrame</code>.</p>
+<h3 id="challenge-10-groupby">Challenge 10: GroupBy<a class="headerlink" href="#challenge-10-groupby" title="Permanent link">&para;</a></h3>
+<p>Find the average unemployment rate for European Union vs. non-European Union countries. </p>
+<ol>
+<li>use <code>groupby</code> to group on "country_group"</li>
+<li>select the "unemployment_rate" column</li>
+<li>use <code>.mean()</code> to get the average</li>
+</ol>
+<div class="codehilite"><pre><span></span>
+</pre></div>
+
+<h2 id="7-exporting-a-dataframe-to-csv">7. Exporting A DataFrame to csv <a id="section7"/><a class="headerlink" href="#7-exporting-a-dataframe-to-csv" title="Permanent link">&para;</a></h2>
+<p>As we can see, Croatia has lots of missing data. This <code>DataFrame</code> contains useful information&mdash;things to consider&mdash;when analyzing the data.</p>
+<p>Suppose we wanted to save this as a .csv file. For this, we'd use the <code>.to_csv()</code> method.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment_rate</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/unemployment_missing.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+<p>Let's look at our file.</p>
+<div class="codehilite"><pre><span></span><span class="err">!</span><span class="n">head</span> <span class="o">-</span><span class="mi">5</span> <span class="n">data</span><span class="o">/</span><span class="n">unemployment_missing</span><span class="o">.</span><span class="n">csv</span>
+</pre></div>
+
+<p>By default, this method writes the indices. We probably don't want that. Let's edit the code. Let's also be explicit about the type of delimiter we're interested in. (Values can be separated by pipes (<code>|</code>), semicolons (<code>;</code>), tabs (<code>\t</code>), etc.)</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment_rate</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/unemployment_missing.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">!</span><span class="n">head</span> <span class="o">-</span><span class="mi">5</span> <span class="n">data</span><span class="o">/</span><span class="n">unemployment_missing</span><span class="o">.</span><span class="n">csv</span>
+</pre></div>
+
+<p>Much better!</p>
+<p>Let's return to our main <code>DataFrame</code>. Now that we have the missing values information in <code>unemployment_rate</code>, we can <strong>drop the last column</strong> we added to <code>unemployment</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;unemployment_rate_null&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+<p>It's important to specify the <code>axis</code> parameter. <code>axis=1</code> refers to columns (<code>axis=0</code> refers to rows.) The parameter <code>inplace=True</code> simply modifies the actual <code>DataFrame</code> rather than returning a new <code>DataFrame</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+<h2 id="8-dealing-with-missing-values-boolean-indexing">8. Dealing With Missing Values: Boolean Indexing <a id="section8"/><a class="headerlink" href="#8-dealing-with-missing-values-boolean-indexing" title="Permanent link">&para;</a></h2>
+<p>Now that we know about the missing values, we have to deal with them. There are two main options:</p>
+<ul>
+<li>Fill the missing values with some other values.</li>
+<li>Do not use observations with missing values.<ul>
+<li>Depending on the analysis, we may want to exclude entire countries.</li>
+</ul>
+</li>
+</ul>
+<p>Because countries with missing unemployment rate data have at least 36 missing values, which is too many to fill, we'll take the second approach and <strong>exclude missing values</strong> from our primary analyses.</p>
+<p>Instead of just getting rid of that data, it might make sense to store it in a separate <code>DataFrame</code>. This way, we could answer questions such as, "do missing values occur during certain months (or years) more frequently?" With this, we will introduce the concept of <em>boolean indexing</em> for filtering data.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment_rate_missing</span> <span class="o">=</span> <span class="n">unemployment</span><span class="p">[</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;unemployment_rate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</pre></div>
+
+<p>Recall that <code>unemployment['unemployment_rate'].isnull()</code> produces an array of boolean values. We used this previously when counting the number of missing values, though we did not see its output. Let's see some of that now.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;unemployment_rate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+
+<p>To create <code>unemployment_rate_missing</code>, we're indexing <code>unemployment</code> with the array above. This returns only the rows where the value in the array is <code>True</code>. Let's see if it worked.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment_rate_missing</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+<p>It is also possible to specify multiple conditions using the <code>&amp;</code> operator, but each condition needs to be inside of parentheses. The <code>.isin()</code> method, which takes a <code>list</code> of values, is useful when you're interested in conditioning on multiple values on a given column. For example, if you want to select multiple countries.</p>
+<p>Now, we're ready to remove the missing data in <code>unemployment</code>. To do this, we can use the <code>.dropna()</code> method.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;unemployment_rate&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+<p>(Note that while we have dropped all observations for which <code>unemployment_rate == NaN</code>, this doesn't mean that all of our observations overlap exactly in time. We may find that there are dates where we have data for one country and no data for others.)</p>
+<h3 id="challenge-11-boolean-indexing">Challenge 11: Boolean Indexing<a class="headerlink" href="#challenge-11-boolean-indexing" title="Permanent link">&para;</a></h3>
+<p>Suppose we only want to look at unemployment data from the year 2000 or later. Use Boolean indexing to create a DataFrame with only these years.</p>
+<ol>
+<li>Select the "year" column from <code>unemployment</code></li>
+<li>Using the year data, create a <strong>mask</strong>: an array of Booleans where each value is True if and only if the year is 2000 or later. Remember, you can use Boolean operators like <code>&gt;</code>, <code>&lt;</code>, and <code>==</code> on a column</li>
+<li>Use the mask from step 2 to index <code>unemployment</code></li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="c1"># select the year column from unemployment</span>
+<span class="n">year</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># create a mask</span>
+<span class="n">later_or_equal_2000</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># Boolean index unemployment</span>
+<span class="o">...</span>
+</pre></div>
+
+<h2 id="9-sorting-values">9. Sorting Values<a class="headerlink" href="#9-sorting-values" title="Permanent link">&para;</a></h2>
+<p>At this point, you might be curious to know what the highest unemployment rates were. For this, we'll use the <code>DataFrame.sort_values()</code> method to <strong>sort the data.</strong></p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;unemployment_rate&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+<p>The above code creates a copy of the <code>DataFrame</code>, sorted in <em>descending</em> order, and prints the first five rows.</p>
+<p>You may have noticed that the data set includes a <code>seasonality</code> column, which we haven't yet discussed. The unemployment rate in this data is actually calculated in three separate ways. Let's look at the values.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;seasonality&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+<p>The three options above correspond to:</p>
+<ul>
+<li>not seasonally adjusted</li>
+<li>seasonally adjusted</li>
+<li>trend cycle</li>
+</ul>
+<p>We'll stick with seasonally adjusted data so that the values are more comparable. Let's look at the highest unemployment rates in this context.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="p">[</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;seasonality&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;sa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;unemployment_rate&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+<p>Spain has the highest seasonally adjusted unemployment rate.</p>
+<h2 id="10-plotting-with-pandas">10. Plotting With Pandas<a class="headerlink" href="#10-plotting-with-pandas" title="Permanent link">&para;</a></h2>
+<p>The best way to get a sense of this data is to <strong>plot it.</strong> Next, we'll start to look at some basic plotting with <code>pandas</code>. Before we begin, let's sort the data by country and date. This is good practice and is especially important when using <code>pandas</code>'s <code>.plot()</code> method because the x-axis values are based on the indices. When we sort, the index values remain unchanged. Thus, we need to reset them. The <code>drop</code> parameter tells <code>pandas</code> to construct a <code>DataFrame</code> <em>without</em> adding a column.</p>
+<div class="codehilite"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;name_en&#39;</span><span class="p">,</span> <span class="s1">&#39;year_month&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">unemployment</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+<p>Let's take a look at Spain's unemployment rate (only because it was the highest) across time.</p>
+<div class="codehilite"><pre><span></span><span class="n">spain</span> <span class="o">=</span> <span class="n">unemployment</span><span class="p">[(</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;name_en&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Spain&#39;</span><span class="p">)</span> <span class="o">&amp;</span>
+                     <span class="p">(</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;seasonality&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;sa&#39;</span><span class="p">)]</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">spain</span><span class="p">[</span><span class="s1">&#39;unemployment_rate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#348ABD&#39;</span><span class="p">)</span>
+</pre></div>
+
+<p>Note that the values along the x-axis represent the indices associated with Spain in the sorted <code>unemployment</code> <code>DataFrame</code>. Wouldn't it be nice if, instead, we could <strong>show the time period</strong> associated with the various unemployment rates for Spain? It might also be interesting to <strong>compare</strong> Spain's unemployment rate with its neighbor to the west, Portugal.</p>
+<p>Let's first create a <code>DataFrame</code> that contains the unemployment data for both countries.</p>
+<div class="codehilite"><pre><span></span><span class="n">ps</span> <span class="o">=</span> <span class="n">unemployment</span><span class="p">[(</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;name_en&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Portugal&#39;</span><span class="p">,</span> <span class="s1">&#39;Spain&#39;</span><span class="p">]))</span> <span class="o">&amp;</span>
+                  <span class="p">(</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;seasonality&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;sa&#39;</span><span class="p">)]</span>
+</pre></div>
+
+<p>Next, we'll <strong>generate time series data</strong> by converting our years and months into <code>datetime</code> objects. <code>pandas</code> provides a <code>to_datetime()</code> function that makes this relatively simple. It converts an argument&mdash;a single value or an array of values&mdash;to <code>datetime</code>. (Note that the return value <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html">depends on the input</a>.) If we were interested in March 23, 1868, for example, we could do the following.</p>
+<div class="codehilite"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;1868/3/23&#39;</span><span class="p">)</span>
+</pre></div>
+
+<p>The argument doesn't necessarily have to be specified in the <code>yyyy/mm/dd</code> format. You could list it as <code>mm/dd/yyyy</code>, but it's a good idea to be explicit. As a result, we pass in a valid string format.</p>
+<div class="codehilite"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;3/23/1868&#39;</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y&#39;</span><span class="p">)</span>
+</pre></div>
+
+<p>Let's create the <code>datetime</code> object and add it to the <code>DataFrame</code> as a column named <code>date</code>. For this, we'll use the <code>DataFrame.insert()</code> method.</p>
+<div class="codehilite"><pre><span></span><span class="n">ps</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;date&#39;</span><span class="p">,</span>
+          <span class="n">value</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ps</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">ps</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/1&#39;</span><span class="p">))</span>
+</pre></div>
+
+<p>Finally, let's only keep certain columns, rename them, and reshape the <code>DataFrame</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">ps</span> <span class="o">=</span> <span class="n">ps</span><span class="p">[[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;name_en&#39;</span><span class="p">,</span> <span class="s1">&#39;unemployment_rate&#39;</span><span class="p">]]</span>
+<span class="n">ps</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Time Period&#39;</span><span class="p">,</span> <span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Unemployment Rate&#39;</span><span class="p">]</span>
+<span class="n">ps</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Time Period&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Unemployment Rate&#39;</span><span class="p">)</span>
+<span class="n">ps</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">ps</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+<p>Notice the indices.</p>
+<div class="codehilite"><pre><span></span><span class="n">ps</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Unemployment Rate</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+<h3 id="challenge-12-plot-without-missing-values">Challenge 12: Plot without missing values<a class="headerlink" href="#challenge-12-plot-without-missing-values" title="Permanent link">&para;</a></h3>
+<p>Note that there are some dates for which we lack data on Spain's unemployment rate. What could you do if you wanted your plot to show only dates where both Spain and Portugal have a defined unemployment rate?</p>
+<div class="codehilite"><pre><span></span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../python/exercise/" title="Exercise" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Exercise
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../dataset/" title="Dataset" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Dataset
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ricedatasci" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>
