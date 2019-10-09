@@ -36,7 +36,7 @@
     
     
       
-        <title>EDA - DEEP (Data Education and Exploration Project)</title>
+        <title>Party Breakdown over Time - DEEP (Data Education and Exploration Project)</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#exploratory-data-analysis" tabindex="1" class="md-skip">
+      <a href="#us-senate-party-breakdown-over-time" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                EDA
+                Party Breakdown over Time
               
             </span>
           
@@ -337,10 +337,46 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Exploratory Data Analysis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Exploratory Data Analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../introduction-to-pandas/" title="Pandas" class="md-nav__link">
-      Pandas
+    <a href="../../eda/overview/" title="Overview" class="md-nav__link">
+      Overview
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../eda/exercise/" title="Exercise" class="md-nav__link">
+      Exercise
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -392,11 +428,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        EDA
+        Party Breakdown over Time
       </label>
     
-    <a href="./" title="EDA" class="md-nav__link md-nav__link--active">
-      EDA
+    <a href="./" title="Party Breakdown over Time" class="md-nav__link md-nav__link--active">
+      Party Breakdown over Time
     </a>
     
       
@@ -410,23 +446,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#describe-candidates" class="md-nav__link">
-    describe candidates
+  <a href="#winning-candidate" class="md-nav__link">
+    Winning Candidate
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#does-this-dataset-just-have-the-winning-candidates-or-all" class="md-nav__link">
-    Does this dataset just have the winning candidates or all?
+  <a href="#identifying-the-winning-candidate" class="md-nav__link">
+    Identifying the Winning Candidate
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#party-popularity-over-time" class="md-nav__link">
-    party popularity over time
+  <a href="#count-of-elections-each-party-won" class="md-nav__link">
+    Count # of Elections each Party Won
   </a>
   
 </li>
@@ -444,6 +480,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../eda-exercise/" title="EDA Exercise" class="md-nav__link">
+      EDA Exercise
+    </a>
   </li>
 
         
@@ -502,23 +550,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#describe-candidates" class="md-nav__link">
-    describe candidates
+  <a href="#winning-candidate" class="md-nav__link">
+    Winning Candidate
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#does-this-dataset-just-have-the-winning-candidates-or-all" class="md-nav__link">
-    Does this dataset just have the winning candidates or all?
+  <a href="#identifying-the-winning-candidate" class="md-nav__link">
+    Identifying the Winning Candidate
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#party-popularity-over-time" class="md-nav__link">
-    party popularity over time
+  <a href="#count-of-elections-each-party-won" class="md-nav__link">
+    Count # of Elections each Party Won
   </a>
   
 </li>
@@ -544,10 +592,11 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/ricedatasci/deep/edit/master/docs/curriculum/examples/eda.ipynb" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/ricedatasci/deep/edit/master/docs/curriculum/examples/party-breakdown.ipynb" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="exploratory-data-analysis">Exploratory Data Analysis <a href="https://mybinder.org/v2/gh/ricedatasci/deep/master?filepath=docs%2Fcurriculum%2Fdocs%2Fcurriculum%2Fexamples%2Feda.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a><a class="headerlink" href="#exploratory-data-analysis" title="Permanent link">&para;</a></h1>
+                <h1 id="us-senate-party-breakdown-over-time">U.S. Senate Party Breakdown over Time<a class="headerlink" href="#us-senate-party-breakdown-over-time" title="Permanent link">&para;</a></h1>
+<p><a href="https://mybinder.org/v2/gh/ricedatasci/deep/master?filepath=docs%2Fcurriculum%2Fdocs%2Fcurriculum%2Fexamples%2Feda.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
@@ -567,328 +616,9 @@
 <span class="n">candidates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
-<h2 id="describe-candidates">describe <code>candidates</code><a class="headerlink" href="#describe-candidates" title="Permanent link">&para;</a></h2>
-<p>It's important to understand a few fundamentals about our data before you start work with it, including what information it contains, how large it is, and how the values are generally distributed.</p>
-<div class="codehilite"><pre><span></span><span class="n">candidates</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>year</th>
-      <th>state</th>
-      <th>state_po</th>
-      <th>state_fips</th>
-      <th>state_cen</th>
-      <th>state_ic</th>
-      <th>office</th>
-      <th>district</th>
-      <th>stage</th>
-      <th>special</th>
-      <th>candidate</th>
-      <th>party</th>
-      <th>writein</th>
-      <th>mode</th>
-      <th>candidatevotes</th>
-      <th>totalvotes</th>
-      <th>unofficial</th>
-      <th>version</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>1976</td>
-      <td>Arizona</td>
-      <td>AZ</td>
-      <td>4</td>
-      <td>86</td>
-      <td>61</td>
-      <td>US Senate</td>
-      <td>statewide</td>
-      <td>gen</td>
-      <td>False</td>
-      <td>Sam Steiger</td>
-      <td>republican</td>
-      <td>False</td>
-      <td>total</td>
-      <td>321236</td>
-      <td>741210</td>
-      <td>False</td>
-      <td>20171011.0</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1976</td>
-      <td>Arizona</td>
-      <td>AZ</td>
-      <td>4</td>
-      <td>86</td>
-      <td>61</td>
-      <td>US Senate</td>
-      <td>statewide</td>
-      <td>gen</td>
-      <td>False</td>
-      <td>Wm. Mathews Feighan</td>
-      <td>independent</td>
-      <td>False</td>
-      <td>total</td>
-      <td>1565</td>
-      <td>741210</td>
-      <td>False</td>
-      <td>20171011.0</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>1976</td>
-      <td>Arizona</td>
-      <td>AZ</td>
-      <td>4</td>
-      <td>86</td>
-      <td>61</td>
-      <td>US Senate</td>
-      <td>statewide</td>
-      <td>gen</td>
-      <td>False</td>
-      <td>Dennis DeConcini</td>
-      <td>democrat</td>
-      <td>False</td>
-      <td>total</td>
-      <td>400334</td>
-      <td>741210</td>
-      <td>False</td>
-      <td>20171011.0</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>1976</td>
-      <td>Arizona</td>
-      <td>AZ</td>
-      <td>4</td>
-      <td>86</td>
-      <td>61</td>
-      <td>US Senate</td>
-      <td>statewide</td>
-      <td>gen</td>
-      <td>False</td>
-      <td>Allan Norwitz</td>
-      <td>libertarian</td>
-      <td>False</td>
-      <td>total</td>
-      <td>7310</td>
-      <td>741210</td>
-      <td>False</td>
-      <td>20171011.0</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>1976</td>
-      <td>Arizona</td>
-      <td>AZ</td>
-      <td>4</td>
-      <td>86</td>
-      <td>61</td>
-      <td>US Senate</td>
-      <td>statewide</td>
-      <td>gen</td>
-      <td>False</td>
-      <td>Bob Field</td>
-      <td>independent</td>
-      <td>False</td>
-      <td>total</td>
-      <td>10765</td>
-      <td>741210</td>
-      <td>False</td>
-      <td>20171011.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p>Looks like we have some rows with a few missing candidate / party fields.</p>
-<div class="codehilite"><pre><span></span><span class="n">candidates</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-</pre></div>
-
-<div class="codehilite"><pre><span></span>year              3421
-state             3421
-state_po          3421
-state_fips        3421
-state_cen         3421
-state_ic          3421
-office            3421
-district          3421
-stage             3421
-special           3421
-candidate         3011
-party             2858
-writein           3421
-mode              3421
-candidatevotes    3421
-totalvotes        3421
-unofficial        3421
-version           3420
-dtype: int64
-</pre></div>
-
-
-<p>This dataset only contains information on US Senate elections.</p>
-<div class="codehilite"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">office</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-</pre></div>
-
-<div class="codehilite"><pre><span></span>US Senate    3421
-Name: office, dtype: int64
-</pre></div>
-
-
-<div class="codehilite"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">party</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-
-<div class="codehilite"><pre><span></span>republican           756
-democrat             748
-libertarian          341
-independent          256
-green                 81
-socialist workers     65
-natural law           45
-constitution          41
-reform                36
-none                  27
-Name: party, dtype: int64
-</pre></div>
-
-
-<div class="codehilite"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>year</th>
-      <th>state_fips</th>
-      <th>state_cen</th>
-      <th>state_ic</th>
-      <th>candidatevotes</th>
-      <th>totalvotes</th>
-      <th>version</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>count</td>
-      <td>3421.000000</td>
-      <td>3421.000000</td>
-      <td>3421.000000</td>
-      <td>3421.000000</td>
-      <td>3.421000e+03</td>
-      <td>3.421000e+03</td>
-      <td>3.420000e+03</td>
-    </tr>
-    <tr>
-      <td>mean</td>
-      <td>1998.862321</td>
-      <td>29.037708</td>
-      <td>52.910552</td>
-      <td>38.989769</td>
-      <td>4.052304e+05</td>
-      <td>2.179958e+06</td>
-      <td>2.017186e+07</td>
-    </tr>
-    <tr>
-      <td>std</td>
-      <td>12.669946</td>
-      <td>15.430661</td>
-      <td>26.035517</td>
-      <td>22.740840</td>
-      <td>7.722098e+05</td>
-      <td>2.114724e+06</td>
-      <td>3.936505e+03</td>
-    </tr>
-    <tr>
-      <td>min</td>
-      <td>1976.000000</td>
-      <td>1.000000</td>
-      <td>11.000000</td>
-      <td>1.000000</td>
-      <td>1.000000e+00</td>
-      <td>1.000000e+00</td>
-      <td>2.017101e+07</td>
-    </tr>
-    <tr>
-      <td>25%</td>
-      <td>1988.000000</td>
-      <td>17.000000</td>
-      <td>33.000000</td>
-      <td>21.000000</td>
-      <td>4.745000e+03</td>
-      <td>6.407020e+05</td>
-      <td>2.017101e+07</td>
-    </tr>
-    <tr>
-      <td>50%</td>
-      <td>2000.000000</td>
-      <td>29.000000</td>
-      <td>54.000000</td>
-      <td>41.000000</td>
-      <td>5.738200e+04</td>
-      <td>1.541036e+06</td>
-      <td>2.017101e+07</td>
-    </tr>
-    <tr>
-      <td>75%</td>
-      <td>2010.000000</td>
-      <td>41.000000</td>
-      <td>74.000000</td>
-      <td>56.000000</td>
-      <td>4.766040e+05</td>
-      <td>2.802641e+06</td>
-      <td>2.017101e+07</td>
-    </tr>
-    <tr>
-      <td>max</td>
-      <td>2018.000000</td>
-      <td>56.000000</td>
-      <td>95.000000</td>
-      <td>82.000000</td>
-      <td>7.864624e+06</td>
-      <td>1.257851e+07</td>
-      <td>2.019011e+07</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<h4 id="does-this-dataset-just-have-the-winning-candidates-or-all">Does this dataset just have the winning candidates or all?<a class="headerlink" href="#does-this-dataset-just-have-the-winning-candidates-or-all" title="Permanent link">&para;</a></h4>
-<p>To get this, we have to think about how to uniquely key an election.  Since we know that we only have US Senate races, we should be able to get this by grouping on year and state of a given election.  Then we can simply count the number of records to determine the number of participants we have recorded.</p>
+<h2 id="winning-candidate">Winning Candidate<a class="headerlink" href="#winning-candidate" title="Permanent link">&para;</a></h2>
+<p>What does each record in our dataset represent? The winning candidate of an election or simply a candidate of an election? To determine this, we have to uniquely key an election.</p>
+<p>Since we know that we only have US Senate races, we should be able to get this by grouping on year and state of a given election.  Then we can simply count the number of records to determine the number of participants we have recorded.</p>
 <p>Below, we show that an election generally spans multiple records in this dataframe.  How can we index the winners?  Note that we will actually be indexing the winner of the popular vote in each election.</p>
 <div class="codehilite"><pre><span></span><span class="n">candidates</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;state&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">party</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 </pre></div>
@@ -909,19 +639,24 @@ Name: party, Length: 740, dtype: int64
 </pre></div>
 
 
-<h3 id="party-popularity-over-time">party popularity over time<a class="headerlink" href="#party-popularity-over-time" title="Permanent link">&para;</a></h3>
+<h3 id="identifying-the-winning-candidate">Identifying the Winning Candidate<a class="headerlink" href="#identifying-the-winning-candidate" title="Permanent link">&para;</a></h3>
+<p>To identify the winner (which we're defining as the candidate with the most votes) we need to identify which candidate has the most votes in a given election.  We've determined that we can identify an election by grouping on the year and state, so we can leverage <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.idxmax.html"><code>#idxmax</code></a> to get the indices of all winning candidates.</p>
 <div class="codehilite"><pre><span></span><span class="n">mostvotes</span> <span class="o">=</span> <span class="n">candidates</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;state&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">candidatevotes</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
 
 <span class="c1"># candidates that had the most votes in their election</span>
 <span class="c1"># &quot;fancy&quot; indexing, mostvotes.values holds indices of rows we want to select</span>
 <span class="n">popular</span> <span class="o">=</span> <span class="n">candidates</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mostvotes</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+</pre></div>
 
-<span class="c1"># get % of parties which had most votes per year</span>
+<h3 id="count-of-elections-each-party-won">Count # of Elections each Party Won<a class="headerlink" href="#count-of-elections-each-party-won" title="Permanent link">&para;</a></h3>
+<p>Given the winning candidate for each election, we can now aggregate by year to count the number of times a party was represented in this group.  We'll finish by plotting a line of party representation for each party by year.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># get % of parties which had most votes per year</span>
 <span class="n">parties</span> <span class="o">=</span> <span class="n">popular</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">party</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="c1"># iterate through the parties and plot a line for each</span>
 <span class="n">gb</span> <span class="o">=</span> <span class="n">parties</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;party&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">gb</span><span class="o">.</span><span class="n">groups</span><span class="p">:</span>
+<span class="c1"># for group in gb.groups:</span>
+<span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;democrat&quot;</span><span class="p">,</span> <span class="s2">&quot;republican&quot;</span><span class="p">]:</span>
     <span class="n">group_df</span> <span class="o">=</span> <span class="n">gb</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
     <span class="n">group_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">group</span><span class="p">)</span>
 
@@ -931,66 +666,11 @@ Name: party, Length: 740, dtype: int64
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span>/home/gvacaliuc/.virtualenvs/deep/lib/python3.6/site-packages/pandas/plotting/_matplotlib/core.py:1085: UserWarning: Attempting to set identical left == right == 0.0 results in singular transformations; automatically expanding.
-  ax.set_xlim(left, right)
-
-
-
-
-
-&lt;matplotlib.legend.Legend at 0x7efc73d33908&gt;
+<div class="codehilite"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ff4ca2f4978&gt;
 </pre></div>
 
 
-<p><img alt="png" src="output_16_2.png" /></p>
-<div class="codehilite"><pre><span></span><span class="n">mostvotes</span> <span class="o">=</span> <span class="n">candidates</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;state&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">candidatevotes</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
-
-<span class="c1"># candidates that had the most votes in their election</span>
-<span class="c1"># &quot;fancy&quot; indexing, mostvotes.values holds indices of rows we want to select</span>
-<span class="n">popular</span> <span class="o">=</span> <span class="n">candidates</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mostvotes</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
-
-<span class="c1"># get % of parties which had most votes per year</span>
-<span class="n">parties</span> <span class="o">=</span> <span class="n">popular</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">party</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-
-<span class="c1"># iterate through the parties and plot a line for each</span>
-<span class="n">gb</span> <span class="o">=</span> <span class="n">parties</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;party&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;republican&quot;</span><span class="p">,</span> <span class="s2">&quot;democrat&quot;</span><span class="p">]:</span>
-    <span class="n">group_df</span> <span class="o">=</span> <span class="n">gb</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
-    <span class="n">group_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">group</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;proportion of party members winning popular vote&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;percentage of winning candidates&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-</pre></div>
-
-<div class="codehilite"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7efc738b9470&gt;
-</pre></div>
-
-
-<p><img alt="png" src="output_17_1.png" /></p>
-<div class="codehilite"><pre><span></span><span class="c1"># how many write ins are there??</span>
-
-<span class="n">candidates</span><span class="o">.</span><span class="n">writein</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
-</pre></div>
-
-<div class="codehilite"><pre><span></span><span class="c1"># how many write ins??</span>
-
-<span class="n">df</span><span class="o">.</span><span class="n">writein</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Proportion of Write-In Candidates&quot;</span><span class="p">)</span>
-</pre></div>
-
-<div class="codehilite"><pre><span></span><span class="c1"># what about through time?</span>
-
-<span class="n">writeins</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">writein</span> \
-                <span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> \
-                <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="s2">&quot;writein&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ratio&quot;</span><span class="p">)</span>
-<span class="n">writeins</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-<div class="codehilite"><pre><span></span><span class="n">writeins</span><span class="p">[</span><span class="n">writeins</span><span class="p">[</span><span class="s2">&quot;writein&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="bp">True</span><span class="p">]</span><span class="o">.</span><span class="n">ratio</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Proportion of US Senate Write-Ins&quot;</span><span class="p">)</span>
-</pre></div>
+<p><img alt="png" src="output_10_1.png" /></p>
                 
                   
                 
@@ -1026,13 +706,13 @@ Name: party, Length: 740, dtype: int64
           </a>
         
         
-          <a href="../../../contributors/" title="Contributors" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../eda-exercise/" title="EDA Exercise" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Contributors
+                EDA Exercise
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

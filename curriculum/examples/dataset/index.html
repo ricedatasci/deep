@@ -337,10 +337,46 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Exploratory Data Analysis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Exploratory Data Analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../introduction-to-pandas/" title="Pandas" class="md-nav__link">
-      Pandas
+    <a href="../../eda/overview/" title="Overview" class="md-nav__link">
+      Overview
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../eda/exercise/" title="Exercise" class="md-nav__link">
+      Exercise
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -379,9 +415,38 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        US Senate Dataset
+      </label>
+    
     <a href="./" title="US Senate Dataset" class="md-nav__link md-nav__link--active">
       US Senate Dataset
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#us-senate-elections" class="md-nav__link">
+    U.S. Senate Elections
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -392,8 +457,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../eda/" title="EDA" class="md-nav__link">
-      EDA
+    <a href="../party-breakdown/" title="Party Breakdown over Time" class="md-nav__link">
+      Party Breakdown over Time
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../eda-exercise/" title="EDA Exercise" class="md-nav__link">
+      EDA Exercise
     </a>
   </li>
 
@@ -449,6 +526,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#us-senate-elections" class="md-nav__link">
+    U.S. Senate Elections
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -464,7 +557,13 @@
                 
                 <h1 id="us-senate-19762018-dataset">U.S. Senate 1976–2018 Dataset <a href="https://mybinder.org/v2/gh/ricedatasci/deep/master?filepath=docs%2Fcurriculum%2Fdocs%2Fcurriculum%2Fexamples%2Fdataset.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a><a class="headerlink" href="#us-senate-19762018-dataset" title="Permanent link">&para;</a></h1>
 <p>Here we'll introduce concepts with examples using a U.S. Senate Elections dataset.</p>
-<p>Below is a basic introduction!</p>
+<h2 id="us-senate-elections">U.S. Senate Elections<a class="headerlink" href="#us-senate-elections" title="Permanent link">&para;</a></h2>
+<p>Before we begin, it's useful to review how U.S. Senate positions are filled:  </p>
+<blockquote>
+<p>National Elections take place every even-numbered year. Every four years the president, vice president, one-third of the Senate, and the entire House are up for election (on-year elections). On even-numbered years when there isn't a presidential election, one-third of the Senate and the whole House are included in the election (off-year elections).<br />
+<a href="https://www.senate.gov/reference/Index/Elections.htm">https://www.senate.gov/reference/Index/Elections.htm</a></p>
+</blockquote>
+<p>Senate terms are held for 6 years.  Every 2 years, &#8531; of the senate is replaced.</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
@@ -819,7 +918,7 @@ Name: party, dtype: int64
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../introduction-to-pandas/" title="Pandas" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../eda/exercise/" title="Exercise" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -828,19 +927,19 @@ Name: party, dtype: int64
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Pandas
+                Exercise
               </span>
             </div>
           </a>
         
         
-          <a href="../eda/" title="EDA" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../party-breakdown/" title="Party Breakdown over Time" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                EDA
+                Party Breakdown over Time
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
